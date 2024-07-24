@@ -1,5 +1,5 @@
 import { NextFont } from 'next/dist/compiled/@next/font';
-import { Open_Sans, Sen } from 'next/font/google';
+import { Inter, Sen } from 'next/font/google';
 
 export const sen: NextFont = Sen({
   subsets: ['latin'],
@@ -7,8 +7,8 @@ export const sen: NextFont = Sen({
   variable: '--font-sen',
 });
 
-export const openSans: NextFont = Open_Sans({
-  subsets: ['cyrillic'],
+export const inter: NextFont = Inter({
+  subsets: ['cyrillic', 'latin'],
   weight: ['400', '500', '700'],
-  variable: '--font-openSans',
+  variable: '--font-inter',
 });

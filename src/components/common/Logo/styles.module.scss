@@ -1,0 +1,19 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/durations.scss';
+@import '@/styles/colors.scss';
+@import '@/styles/fonts.scss';
+
+.logo {
+  font-size: $fSize24px;
+  line-height: $lHeight48px;
+
+  @media (max-width: $mobileS) {
+    font-size: $fSize18px;
+    line-height: $lHeight20px;
+  }
+
+  & > a {
+    color: $color-white;
+    text-decoration: none;
+  }
+}

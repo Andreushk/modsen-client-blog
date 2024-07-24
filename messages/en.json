@@ -1,4 +1,13 @@
 {
+  "Header": {
+    "/": "Home",
+    "/blog": "Blog",
+    "/about-us": "About us",
+    "/contact-us": "Contact us",
+    "/privacy-policy": "Privacy Policy",
+
+    "video-button": "Video about us"
+  },
   "HomePage": {
     "title": "Hello world!"
   }

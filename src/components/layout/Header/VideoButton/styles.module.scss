@@ -1,0 +1,12 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.header_video {
+  margin-left: $s32px;
+  width: 228px;
+  height: 56px;
+
+  @media (max-width: $mobileL) {
+    width: 80%;
+  }
+}

@@ -2,7 +2,9 @@
 
 import { useRouter } from 'next/navigation';
 import { useLocale } from 'next-intl';
-import { useTransition } from 'react';
+import React, { useTransition } from 'react';
+
+import styles from './style.module.scss';
 
 const LanguageSelect: React.FC = () => {
   const [, startTransition] = useTransition();
@@ -17,8 +19,7 @@ const LanguageSelect: React.FC = () => {
   };
 
   return (
-    <label htmlFor="lang-select">
-      <p>Change language</p>
+    <label htmlFor="lang-select" className={styles.select}>
       <select defaultValue={localActive} id="lang-select" onChange={handleSelectChange}>
         <option value="en">English</option>
         <option value="ru">Russian</option>
@@ -27,4 +28,4 @@ const LanguageSelect: React.FC = () => {
   );
 };
 
-export default LanguageSelect;
+export default React.memo(LanguageSelect);

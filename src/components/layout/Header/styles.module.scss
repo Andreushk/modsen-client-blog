@@ -1,0 +1,42 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  background-color: $color-dark-blue;
+  height: 80px;
+}
+
+.header_content {
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  padding-right: $s80px;
+  padding-left: $s80px;
+  margin: 0 auto;
+
+  @media (max-width: $tabletM) {
+    padding-right: $s56px;
+    padding-left: $s56px;
+  }
+
+  @media (max-width: $tabletS) {
+    padding-right: $s40px;
+    padding-left: $s40px;
+  }
+
+  @media (max-width: $mobileL) {
+    padding-right: $s24px;
+    padding-left: $s24px;
+  }
+}
+
+.header_nav {
+  margin-left: auto;
+}

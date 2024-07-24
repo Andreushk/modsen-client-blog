@@ -1,0 +1,10 @@
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+body {
+  max-width: 1440px;
+  background-color: $color-white;
+  padding-top: $s80px;
+  margin: 0 auto;
+  outline: 1px solid red;
+}
