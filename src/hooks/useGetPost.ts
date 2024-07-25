@@ -18,14 +18,15 @@ const useGetPost = (postId: number): ReturnValue => {
       try {
         setIsLoading(true);
         const response: Response = await fetch(
-          `https://client-blog-server-omega.vercel.app/posts?id=${postId}`,
+          `${process.env.NEXT_PUBLIC_SERVER_URL}posts?id=${postId}`,
         );
         const result: Post[] = await response.json();
         setPost(result[0]);
         setIsLoading(false);
       } catch (e) {
+        const errorObject = e as Error;
         setIsLoading(false);
-        setError(e.message);
+        setError(errorObject.message);
         console.error(e);
       }
     };
