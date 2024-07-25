@@ -14,7 +14,7 @@ interface ComponentProps extends ButtonsAttributesType {
 const Button: React.FC<ComponentProps> = ({ children, styleType, ...props }) => (
   <button
     type="button"
-    className={` ${sen.className} ${styles.button} ${styleType === 'white' ? styles.white : ''}`}
+    className={` ${sen.className} ${styles.button} ${styleType === 'white' ? styles.white : styles.yellow}`}
     {...props}
   >
     {children}

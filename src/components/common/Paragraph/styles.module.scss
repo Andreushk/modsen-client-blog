@@ -1,0 +1,21 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/colors.scss';
+@import '@/styles/fonts.scss';
+
+.paragraph {
+  font-size: $fSize16px;
+  line-height: $lHeight28px;
+
+  @media (max-width: $mobileM) {
+    font-size: $fSize14px;
+    line-height: $lHeight20px;
+  }
+}
+
+.light {
+  color: $color-white;
+}
+
+.dark {
+  color: $color-medium-gray;
+}

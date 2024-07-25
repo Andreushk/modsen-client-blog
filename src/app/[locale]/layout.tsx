@@ -25,7 +25,7 @@ const RootLayout: React.FC<LayoutProps> = ({ children, params }) => {
       <body className={sen.className}>
         <NextIntlClientProvider messages={messages}>
           <Header />
-          {children}
+          <main>{children}</main>
         </NextIntlClientProvider>
       </body>
     </html>

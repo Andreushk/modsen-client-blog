@@ -9,6 +9,9 @@
     "video-button": "Video about us"
   },
   "HomePage": {
-    "title": "Hello world!"
+    "hero": {
+      "posted": "Posted on",
+      "read-more": "Read More >"
+    }
   }
 }

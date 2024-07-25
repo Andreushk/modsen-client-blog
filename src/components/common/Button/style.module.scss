@@ -9,7 +9,11 @@
   font-size: $fSize18px;
   line-height: $lHeight24px;
   font-weight: $fWeight700;
-  transition: $d150ms ease;
+  transition: $d150ms ease-in-out;
+
+  &:hover {
+    background-color: inherit;
+  }
 }
 
 .white {
@@ -18,7 +22,16 @@
   border: 1px solid $color-white;
 
   &:hover {
-    background-color: inherit;
     color: $color-white;
+  }
+}
+
+.yellow {
+  background-color: $color-yellow;
+  color: $color-dark-blue;
+  border: 1px solid $color-yellow;
+
+  &:hover {
+    color: $color-yellow;
   }
 }

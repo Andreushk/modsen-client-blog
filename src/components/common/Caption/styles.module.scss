@@ -1,0 +1,26 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/colors.scss';
+@import '@/styles/fonts.scss';
+
+.caption {
+  font-size: $fSize16px;
+  line-height: $lHeight20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  @media (max-width: $mobileM) {
+    font-size: $fSize14px;
+  }
+
+  & > span {
+    font-weight: $fWeight600;
+  }
+}
+
+.light {
+  color: $color-white;
+}
+
+.dark {
+  color: $color-dark-blue;
+}

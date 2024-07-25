@@ -9,6 +9,6 @@ export const sen: NextFont = Sen({
 
 export const inter: NextFont = Inter({
   subsets: ['cyrillic', 'latin'],
-  weight: ['400', '500', '700'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-inter',
 });
