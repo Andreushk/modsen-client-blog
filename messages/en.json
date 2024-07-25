@@ -12,6 +12,12 @@
     "hero": {
       "posted": "Posted on",
       "read-more": "Read More >"
+    },
+    "featured": {
+      "featured": "Featured Post",
+      "read-more": "Read More >",
+      "all": "All Posts",
+      "view-all": "View All"
     }
   }
 }

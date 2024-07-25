@@ -1,0 +1,47 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.featured_and_all_posts {
+  display: flex;
+  gap: $s32px;
+  padding: $s128px $s80px;
+
+  @media (max-width: $tabletM) {
+    padding: $s80px;
+    flex-direction: column;
+    gap: $s56px;
+  }
+
+  @media (max-width: $mobileL) {
+    padding: $s80px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px;
+  }
+}
+
+.featured_post_part {
+  flex: 1 1 57.266%;
+}
+
+.all_posts_part {
+  flex: 1 1 40.391%;
+}
+
+.featured_post_part > div:first-of-type,
+.all_posts_part > div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $s32px;
+
+  & > h2 {
+    text-transform: capitalize;
+  }
+
+  & > a {
+    color: $color-purple;
+  }
+}

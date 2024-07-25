@@ -1,5 +1,6 @@
 export enum AppRoutes {
   BASIC = '/',
+  BLOG_POST = '/blog-post',
   BLOG = '/blog',
   ABOUT_US = '/about-us',
   CONTACT_US = '/contact-us',

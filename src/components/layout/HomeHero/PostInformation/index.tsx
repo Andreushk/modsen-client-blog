@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 import { Button, Caption, Paragraph } from '@/components';
 import { AppRoutes } from '@/constants/routes';
 import { Link } from '@/navigation';
+import { inter } from '@/styles/fonts';
 import { Post } from '@/types/models/posts';
 
 import BackgroundImage from './BackgroundImage';
@@ -24,8 +25,8 @@ const PostInformation: React.FC<ComponentProps> = ({ post }) => {
             {t('hero.posted')} <span>{post.category}</span>
           </Caption>
           <h2 className={styles.post_title}>{post.title}</h2>
-          <span className={styles.post_credentials}>
-            By <Link href={`${AppRoutes.AUTHOR}/${post.authorId}`}>{post.author}</Link> |{' '}
+          <span className={` ${inter.className} ${styles.post_credentials}`}>
+            By <Link href={`${AppRoutes.AUTHOR}/${post.authorId}`}>{post.author}</Link> l{' '}
             {post.createdAt}
           </span>
           <Paragraph style="light">{post.shortDescription}</Paragraph>

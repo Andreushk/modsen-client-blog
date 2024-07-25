@@ -1,0 +1,21 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.post {
+  cursor: pointer;
+  padding: $s32px;
+  transition: background-color 250ms ease-in-out;
+
+  @media (max-width: $mobileL) {
+    padding: $s24px;
+  }
+
+  &:hover {
+    background-color: $color-light-yellow;
+  }
+
+  & > h4 {
+    margin-top: $s8px;
+  }
+}

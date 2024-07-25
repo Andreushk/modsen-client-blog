@@ -4,37 +4,36 @@ import { POSTS_PATH } from '@/constants/api';
 import { Post } from '@/types/models/posts';
 
 interface ReturnValue {
-  post: Post | null;
+  posts: Post[] | null;
   isLoading: boolean;
   error: string | null;
 }
 
-const useGetPost = (postId: number): ReturnValue => {
-  const [post, setPost] = useState<Post | null>(null);
+const useGetPosts = (limit: number): ReturnValue => {
+  const [posts, setPosts] = useState<Post[] | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchPostData = async () => {
+    const fetchPosts = async () => {
       try {
         setIsLoading(true);
         const response: Response = await fetch(
-          `${process.env.NEXT_PUBLIC_SERVER_URL}${POSTS_PATH}?id=${postId}`,
+          `${process.env.NEXT_PUBLIC_SERVER_URL}${POSTS_PATH}?_limit=${limit}`,
         );
-        const result: Post[] = await response.json();
-        setPost(result[0]);
+        const data: Post[] = await response.json();
+        setPosts(data);
         setIsLoading(false);
       } catch (e) {
         const errorObject = e as Error;
         setIsLoading(false);
         setError(errorObject.message);
-        console.error(e);
       }
     };
-    fetchPostData();
-  }, [postId]);
+    fetchPosts();
+  }, [limit]);
 
-  return { post, isLoading, error };
+  return { posts, isLoading, error };
 };
 
-export default useGetPost;
+export default useGetPosts;

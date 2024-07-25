@@ -7,7 +7,7 @@ import PostInformation from './PostInformation';
 import styles from './styles.module.scss';
 
 const HomeHero: React.FC = () => {
-  const { post, isLoading, error } = useGetPost(1);
+  const { post, isLoading, error } = useGetPost(2);
 
   return (
     <section className={styles.home_hero}>

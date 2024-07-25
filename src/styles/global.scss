@@ -7,3 +7,32 @@ body {
   padding-top: $s80px;
   margin: 0 auto;
 }
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -2px;
+  color: $color-dark-blue;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -1px;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
