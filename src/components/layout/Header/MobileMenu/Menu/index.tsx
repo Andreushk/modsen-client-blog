@@ -4,9 +4,13 @@ import { LanguageSelect, Navigation } from '@/components';
 
 import VideoButton from '../../VideoButton';
 
-const Menu: React.FC = () => (
+interface ComponentProps {
+  onClose: () => void;
+}
+
+const Menu: React.FC<ComponentProps> = ({ onClose }) => (
   <>
-    <Navigation direction="column" />
+    <Navigation direction="column" onLinkClick={onClose} />
     <VideoButton />
     <LanguageSelect />
   </>

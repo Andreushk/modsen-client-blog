@@ -13,9 +13,14 @@ type DirectionTypes = 'column' | 'row';
 interface ComponentProps {
   direction?: DirectionTypes;
   withPrivacyPolicy?: boolean;
+  onLinkClick?: () => void;
 }
 
-const Navigation: React.FC<ComponentProps> = ({ direction = 'row', withPrivacyPolicy = false }) => {
+const Navigation: React.FC<ComponentProps> = ({
+  direction = 'row',
+  withPrivacyPolicy = false,
+  onLinkClick,
+}) => {
   const t = useTranslations('Header');
 
   const ulClasses: string = `${style.nav_list} ${direction === 'column' ? style.column : ''} ${inter.className}`;
@@ -25,14 +30,14 @@ const Navigation: React.FC<ComponentProps> = ({ direction = 'row', withPrivacyPo
       <ul className={ulClasses}>
         {NAVIGATION_OPTIONS.map((href) => (
           <li key={href}>
-            <Link href={href} className={style.nav_item}>
+            <Link href={href} className={style.nav_item} onClick={onLinkClick}>
               {t(href)}
             </Link>
           </li>
         ))}
         {withPrivacyPolicy && (
           <li>
-            <Link href={AppRoutes.PRIVACY_POLICY} className={style.nav_item}>
+            <Link href={AppRoutes.PRIVACY_POLICY} className={style.nav_item} onClick={onLinkClick}>
               {t(PRIVACY_POLICY_HREF)}
             </Link>
           </li>

@@ -21,7 +21,7 @@ const MobileMenu: React.FC<ComponentProps> = ({ onClose }) => {
     e.stopPropagation();
   };
 
-  const handleOverlayClick = useCallback(() => {
+  const handleClose = useCallback(() => {
     setISGoingToClose(true);
     setIsVisible(false);
 
@@ -33,12 +33,12 @@ const MobileMenu: React.FC<ComponentProps> = ({ onClose }) => {
 
   return (
     <PortalToBody>
-      <Overlay isGoingToClose={isGoingToClose} onClick={handleOverlayClick}>
+      <Overlay isGoingToClose={isGoingToClose} onClick={handleClose}>
         <div
           className={`${styles.mobile_menu} ${isVisible ? styles.active : null}`}
           onClick={handleMobileMenuClick}
         >
-          <Menu />
+          <Menu onClose={handleClose} />
         </div>
       </Overlay>
     </PortalToBody>
