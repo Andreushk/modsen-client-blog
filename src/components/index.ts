@@ -17,6 +17,6 @@ export { default as FeaturedPost } from './layout/FeaturedPost';
 export { default as Header } from './layout/Header';
 export { default as HomeHero } from './layout/HomeHero';
 export { default as ListOfAuthors } from './layout/ListOfAuthors';
-export { default as Partners } from './layout/Partners';
+export { default as LogoComponent } from './layout/LogoComponent';
 export { default as PortalToBody } from './layout/PortalToBody';
-export { default as WhyWeStarted } from './layout/WhyWeStarted';
+export { default as SpecialPost } from './layout/SpecialPost';

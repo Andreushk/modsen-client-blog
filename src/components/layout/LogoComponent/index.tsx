@@ -5,7 +5,7 @@ import { Looper } from '@/components';
 import PARTNERS_OPTIONS from './options';
 import styles from './styles.module.scss';
 
-const Partners: React.FC = () => (
+const LogoComponent: React.FC = () => (
   <section>
     <Looper speed={35} direction="left">
       <div className={styles.logos_container}>{PARTNERS_OPTIONS.map((icon) => icon)}</div>
@@ -13,4 +13,4 @@ const Partners: React.FC = () => (
   </section>
 );
 
-export default Partners;
+export default LogoComponent;

@@ -4,8 +4,8 @@ import {
   FeaturedPost,
   HomeHero,
   ListOfAuthors,
-  Partners,
-  WhyWeStarted,
+  LogoComponent,
+  SpecialPost,
 } from '@/components';
 
 const Home: React.FC = () => (
@@ -14,9 +14,9 @@ const Home: React.FC = () => (
     <FeaturedPost />
     <AboutAndMission />
     <ChooseCategory />
-    <WhyWeStarted />
+    <SpecialPost />
     <ListOfAuthors />
-    <Partners />
+    <LogoComponent />
   </>
 );
 

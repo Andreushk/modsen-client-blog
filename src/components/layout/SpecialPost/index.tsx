@@ -5,7 +5,7 @@ import { Button, Caption, Paragraph } from '@/components';
 
 import styles from './styles.module.scss';
 
-const WhyWeStarted: React.FC = () => {
+const SpecialPost: React.FC = () => {
   const t = useTranslations('HomePage');
 
   return (
@@ -33,4 +33,4 @@ const WhyWeStarted: React.FC = () => {
   );
 };
 
-export default WhyWeStarted;
+export default SpecialPost;
