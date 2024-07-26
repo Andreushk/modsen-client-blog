@@ -39,6 +39,7 @@
     "jsx-a11y/control-has-associated-label": "off",
     "react/jsx-props-no-spreading": "off",
     "react/require-default-props": "off",
+    "react/no-array-index-key": "off",
     "react/react-in-jsx-scope": "off",
     "react/style-prop-object": "off",
     "consistent-return": "warn",
