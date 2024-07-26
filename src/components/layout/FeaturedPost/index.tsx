@@ -1,8 +1,10 @@
 'use client';
 
 import { Paragraph } from '@/components';
-import useGetPost from '@/hooks/useGetPost';
-import useGetPosts from '@/hooks/useGetPosts';
+import { ALL_POSTS_REQUEST_URL, FEATURED_POST_REQUEST_URL } from '@/constants/api';
+import useQueryData from '@/hooks/useQueryData';
+import useQueryDataArray from '@/hooks/useQueryDataArray';
+import { Post } from '@/types/models/posts';
 
 import AllPostsPart from './AllPostsPart';
 import FeaturedPart from './FeaturedPart';
@@ -11,13 +13,17 @@ import LoadingFeaturedPostPart from './LoadingFeaturedPostPart';
 import styles from './styles.module.scss';
 
 const FeaturedPost: React.FC = () => {
-  const { posts, isLoading: isPostsLoading, error: errorPosts } = useGetPosts(4);
+  const {
+    data: posts,
+    isLoading: isPostsLoading,
+    error: errorPosts,
+  } = useQueryDataArray<Post>(ALL_POSTS_REQUEST_URL);
 
   const {
-    post: featuredPost,
+    data: featuredPost,
     isLoading: isFeaturedPostLoading,
     error: errorFeaturedPost,
-  } = useGetPost(1);
+  } = useQueryData<Post>(FEATURED_POST_REQUEST_URL);
 
   if (errorFeaturedPost || errorPosts) {
     return (

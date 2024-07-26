@@ -3,6 +3,7 @@ import {
   ChooseCategory,
   FeaturedPost,
   HomeHero,
+  ListOfAuthors,
   WhyWeStarted,
 } from '@/components';
 
@@ -13,6 +14,7 @@ const Home: React.FC = () => (
     <AboutAndMission />
     <ChooseCategory />
     <WhyWeStarted />
+    <ListOfAuthors />
   </>
 );
 

@@ -15,5 +15,6 @@ export { default as ChooseCategory } from './layout/ChooseCategory';
 export { default as FeaturedPost } from './layout/FeaturedPost';
 export { default as Header } from './layout/Header';
 export { default as HomeHero } from './layout/HomeHero';
+export { default as ListOfAuthors } from './layout/ListOfAuthors';
 export { default as PortalToBody } from './layout/PortalToBody';
 export { default as WhyWeStarted } from './layout/WhyWeStarted';
