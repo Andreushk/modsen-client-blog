@@ -12,7 +12,7 @@ const SpecialPost: React.FC = () => {
     <section className={styles.why_we_started}>
       <div className={styles.why_we_started_container}>
         <div>
-          <Image src="/images/group-of-people.jpeg" width={949} height={705} alt="" />
+          <Image src="/images/group-of-people.jpeg" width={949} height={705} alt="Post thumbnail" />
         </div>
         <div className={styles.why_we_started_information}>
           <Caption style="dark" bolded>

@@ -20,3 +20,4 @@ export { default as ListOfAuthors } from './layout/ListOfAuthors';
 export { default as LogoComponent } from './layout/LogoComponent';
 export { default as PortalToBody } from './layout/PortalToBody';
 export { default as SpecialPost } from './layout/SpecialPost';
+export { default as Testimonials } from './layout/Testimonials';

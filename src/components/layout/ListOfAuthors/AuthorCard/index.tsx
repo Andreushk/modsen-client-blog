@@ -26,7 +26,12 @@ const AuthorCard: React.FC<ComponentProps> = ({ id, name, profileImageId, social
     <div className={styles.author_card}>
       <div className={styles.author_card_image_circle_container}>
         <div>
-          <Image src={`/images/author${profileImageId}.jpg`} width={128} height={128} alt="" />
+          <Image
+            src={`/images/author${profileImageId}.jpg`}
+            width={128}
+            height={128}
+            alt="Author picture"
+          />
         </div>
       </div>
       <h3>{name}</h3>

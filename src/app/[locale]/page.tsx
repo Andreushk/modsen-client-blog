@@ -6,6 +6,7 @@ import {
   ListOfAuthors,
   LogoComponent,
   SpecialPost,
+  Testimonials,
 } from '@/components';
 
 const Home: React.FC = () => (
@@ -17,6 +18,7 @@ const Home: React.FC = () => (
     <SpecialPost />
     <ListOfAuthors />
     <LogoComponent />
+    <Testimonials />
   </>
 );
 

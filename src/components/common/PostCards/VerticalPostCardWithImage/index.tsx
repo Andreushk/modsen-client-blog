@@ -18,7 +18,7 @@ const VerticalPostCardWithImage: React.FC<ComponentProps> = ({ post }) => {
   return (
     <article className={styles.post}>
       <div className={styles.post_image}>
-        <Image src="/images/buildings-and-palms.jpg" width={669} height={352} alt="" />
+        <Image src="/images/buildings-and-palms.jpg" width={669} height={352} alt="Post image" />
       </div>
       <Label>
         By <Link href={`${AppRoutes.AUTHOR}/${101}`}>{post.author}</Link> l {post.createdAt}

@@ -6,7 +6,13 @@ const IMAGE_PATH = '/images/man-in-suit.jpg';
 
 const BackgroundImage: React.FC = () => (
   <div className={styles.image_wrapper}>
-    <Image src={IMAGE_PATH} width={1440} height={720} priority alt="Background Image" />
+    <Image
+      src={IMAGE_PATH}
+      width={1440}
+      height={720}
+      priority
+      alt="Clever man in suit using laptop"
+    />
   </div>
 );
 

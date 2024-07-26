@@ -2,6 +2,7 @@ import getRandomPostId from '@/utils/getRandomPostId';
 
 export const POSTS_PATH = 'posts/';
 export const AUTHORS_PATH = 'authors/';
+export const TESTIMONIALS_PATH = 'testimonials/';
 
 const FEATURED_POST_ID = 20;
 export const FEATURED_POST_REQUEST_URL = `${process.env.NEXT_PUBLIC_SERVER_URL}${POSTS_PATH}?id=${FEATURED_POST_ID}`;
@@ -11,3 +12,5 @@ export const ALL_POSTS_REQUEST_URL = `${process.env.NEXT_PUBLIC_SERVER_URL}${POS
 
 const HERO_POST_ID = getRandomPostId();
 export const HERO_POST_REQUEST_URL = `${process.env.NEXT_PUBLIC_SERVER_URL}${POSTS_PATH}?id=${HERO_POST_ID}`;
+
+export const TESTIMONIALS_REQUEST_URL = `${process.env.NEXT_PUBLIC_SERVER_URL}${TESTIMONIALS_PATH}`;

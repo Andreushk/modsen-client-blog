@@ -1,0 +1,40 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/durations.scss';
+@import '@/styles/spacings.scss';
+
+.slider {
+  position: relative;
+  flex: 1 1 41.88%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8.53%;
+
+  @media (max-width: $laptopS) {
+    flex: unset;
+    margin-left: 0;
+  }
+}
+
+.slide {
+  height: inherit;
+  opacity: 0;
+  transition: opacity $s450ms ease-in-out;
+  margin-bottom: $s24px;
+}
+
+.active {
+  opacity: 1;
+}
+
+.author_and_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $s16px;
+  margin-top: auto;
+
+  @media (max-width: $mobileL) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
