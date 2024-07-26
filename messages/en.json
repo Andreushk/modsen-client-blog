@@ -18,6 +18,17 @@
       "read-more": "Read More >",
       "all": "All Posts",
       "view-all": "View All"
+    },
+    "about-mission": {
+      "about": {
+        "caption": "About us",
+        "title": "We are a community of content writers who share their learnings",
+        "read-more": "Read More >"
+      },
+      "mission": {
+        "caption": "Our mission",
+        "title": "Creating valuable content for creatives all around the world"
+      }
     }
   }
 }
