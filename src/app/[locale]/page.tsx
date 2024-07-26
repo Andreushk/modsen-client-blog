@@ -1,4 +1,10 @@
-import { AboutAndMission, ChooseCategory, FeaturedPost, HomeHero } from '@/components';
+import {
+  AboutAndMission,
+  ChooseCategory,
+  FeaturedPost,
+  HomeHero,
+  WhyWeStarted,
+} from '@/components';
 
 const Home: React.FC = () => (
   <>
@@ -6,6 +12,7 @@ const Home: React.FC = () => (
     <FeaturedPost />
     <AboutAndMission />
     <ChooseCategory />
+    <WhyWeStarted />
   </>
 );
 

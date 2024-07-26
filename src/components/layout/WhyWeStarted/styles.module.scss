@@ -1,0 +1,79 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+@import '@/styles/fonts.scss';
+
+.why_we_started {
+  padding: 0 $s80px;
+
+  @media (max-width: $mobileL) {
+    padding: 0;
+  }
+}
+
+.why_we_started_container {
+  position: relative;
+  height: 705px;
+
+  & > div:first-of-type {
+    max-width: 949px;
+    width: 100%;
+    height: 705px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    & > img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.why_we_started_information {
+  max-width: 706px;
+  width: 100%;
+  background-color: $color-white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: $s80px;
+
+  @media (max-width: $desktopS) {
+    max-width: 500px;
+    padding: $s48px;
+  }
+
+  @media (max-width: $tabletS) {
+    max-width: 350px;
+    padding: $s32px;
+
+    & > h1 {
+      font-size: $fSize28px;
+      line-height: $lHeight40px;
+      letter-spacing: -1px;
+    }
+  }
+
+  @media (max-width: $mobileL) {
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    height: fit-content;
+  }
+
+  & > p:first-of-type {
+    margin-bottom: $s24px;
+  }
+
+  & > p:last-of-type {
+    margin-top: $s16px;
+    margin-bottom: $s32px;
+  }
+
+  & > div:last-of-type {
+    width: 269px;
+    height: 56px;
+  }
+}
