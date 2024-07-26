@@ -1,0 +1,44 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.choose_category {
+  padding: $s128px $s80px;
+
+  @media (max-width: $mobileL) {
+    padding: $s80px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px;
+  }
+
+  & > h2 {
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: $s48px;
+
+    @media (max-width: $tabletM) {
+      margin-bottom: $s32px;
+    }
+  }
+
+  & a:hover h3 {
+    text-decoration: none;
+  }
+}
+
+.choose_category_items_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $s32px;
+
+  @media (max-width: $tabletM) {
+    gap: $s16px;
+  }
+
+  @media (max-width: $tabletS) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}

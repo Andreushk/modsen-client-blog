@@ -1,0 +1,58 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/durations.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.category {
+  cursor: pointer;
+  width: 296px;
+  padding: $s32px;
+  border: 1px solid $color-medium-gray-30;
+  transition: $d150ms ease-in-out;
+  text-decoration: none !important;
+
+  @media (max-width: $tabletM) {
+    padding: $s24px;
+  }
+
+  @media (max-width: $tabletS) {
+    width: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: $color-yellow;
+    border-color: $color-yellow;
+
+    h3,
+    p {
+      text-decoration: none;
+    }
+
+    @media (max-width: $tabletM) {
+      transform: scale(1.04);
+    }
+  }
+
+  & > div:first-of-type {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: $color-light-yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & > h3 {
+    margin-top: $s16px;
+    margin-bottom: $s4px;
+    color: $color-dark-blue;
+    text-transform: capitalize;
+  }
+
+  &.selected {
+    background-color: $color-light-yellow;
+    border-color: $color-light-yellow;
+  }
+}

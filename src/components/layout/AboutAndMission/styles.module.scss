@@ -86,5 +86,9 @@
     font-size: $fSize18px;
     font-weight: $fWeight700;
     line-height: $lHeight32px;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

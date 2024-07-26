@@ -11,6 +11,7 @@ export { default as VerticalPostCardWithImage } from './common/PostCards/Vertica
 export { default as VerticalPostCardWithoutImage } from './common/PostCards/VerticalPostCardWithoutImage';
 export { default as Spinner } from './common/Spinner';
 export { default as AboutAndMission } from './layout/AboutAndMission';
+export { default as ChooseCategory } from './layout/ChooseCategory';
 export { default as FeaturedPost } from './layout/FeaturedPost';
 export { default as Header } from './layout/Header';
 export { default as HomeHero } from './layout/HomeHero';
