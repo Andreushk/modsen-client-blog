@@ -1,5 +1,6 @@
 export { default as Button } from './common/Button';
 export { default as Caption } from './common/Caption';
+export { default as Catagories } from './common/Catagories';
 export { default as Label } from './common/Label';
 export { default as LanguageSelect } from './common/LanguageSelect';
 export { default as Logo } from './common/Logo';
@@ -15,6 +16,7 @@ export { default as ReadMoreButtonContainer } from './common/ReadMoreButtonConta
 export { default as Spinner } from './common/Spinner';
 export { default as AboutAndMission } from './layout/AboutAndMission';
 export { default as AllBlogs } from './layout/AllBlogs';
+export { default as BlogCategories } from './layout/BlogCategories';
 export { default as BlogHeader } from './layout/BlogHeader';
 export { default as ChooseCategory } from './layout/ChooseCategory';
 export { default as FeaturedPost } from './layout/FeaturedPost';

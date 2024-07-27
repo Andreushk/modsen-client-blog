@@ -1,5 +1,5 @@
 const POST_IMAGES_PATHS: string[] = [
-  '/images/employees-walking.jpg',
+  '/images/blurred-meetup.jpg',
   '/images/women-in-glasses.jpg',
   '/images/meetup.jpg',
   '/images/women-behind-desc.jpg',

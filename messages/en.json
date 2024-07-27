@@ -60,6 +60,7 @@
       "title": "All posts",
       "next": "Next >",
       "prev": "< Prev"
-    }
+    },
+    "all-categories": "All categories"
   }
 }

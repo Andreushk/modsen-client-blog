@@ -1,9 +1,8 @@
 import { useTranslations } from 'next-intl';
 
+import { Catagories } from '@/components';
 import { CategoriesType } from '@/types/categories';
 
-import Item from './Item';
-import CATEGORY_OPTIONS from './options';
 import styles from './styles.module.scss';
 
 interface ComponentProps {
@@ -16,17 +15,7 @@ const ChooseCategory: React.FC<ComponentProps> = ({ selectedCategory = 'startup'
   return (
     <section className={styles.choose_category}>
       <h2>{t('choose-category')}</h2>
-      <div className={styles.choose_category_items_container}>
-        {CATEGORY_OPTIONS.map(({ title, description, icon }) => (
-          <Item
-            key={title}
-            title={title}
-            description={description}
-            icon={icon}
-            selected={selectedCategory === title}
-          />
-        ))}
-      </div>
+      <Catagories selectedCategory={selectedCategory} />
     </section>
   );
 };

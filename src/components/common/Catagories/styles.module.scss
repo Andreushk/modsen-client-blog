@@ -1,0 +1,18 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $s32px;
+
+  @media (max-width: $tabletM) {
+    gap: $s16px;
+  }
+
+  @media (max-width: $tabletS) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}

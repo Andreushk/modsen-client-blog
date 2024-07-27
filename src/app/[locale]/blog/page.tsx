@@ -1,9 +1,10 @@
-import { AllBlogs, BlogHeader, JoinOurTeam } from '@/components';
+import { AllBlogs, BlogCategories, BlogHeader, JoinOurTeam } from '@/components';
 
 const Blog: React.FC = () => (
   <>
     <BlogHeader />
     <AllBlogs />
+    <BlogCategories />
     <JoinOurTeam />
   </>
 );
