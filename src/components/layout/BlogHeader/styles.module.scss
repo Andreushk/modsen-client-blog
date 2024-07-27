@@ -1,0 +1,31 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.blog_header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 11.02%;
+  min-height: 523px;
+  padding: $s80px;
+  background-color: $color-light-purple;
+
+  @media (max-width: $laptopM) {
+    gap: 5%;
+  }
+
+  @media (max-width: $tabletM) {
+    gap: $s32px;
+    flex-direction: column;
+  }
+
+  @media (max-width: $mobileL) {
+    padding: $s80px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px;
+  }
+}

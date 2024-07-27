@@ -13,6 +13,7 @@ export { default as VerticalPostCardWithoutImage } from './common/PostCards/Vert
 export { default as ReadMoreButtonContainer } from './common/ReadMoreButtonContainer';
 export { default as Spinner } from './common/Spinner';
 export { default as AboutAndMission } from './layout/AboutAndMission';
+export { default as BlogHeader } from './layout/BlogHeader';
 export { default as ChooseCategory } from './layout/ChooseCategory';
 export { default as FeaturedPost } from './layout/FeaturedPost';
 export { default as Footer } from './layout/Footer';
