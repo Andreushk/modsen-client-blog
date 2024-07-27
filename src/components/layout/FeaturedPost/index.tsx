@@ -1,7 +1,7 @@
 'use client';
 
 import { Paragraph } from '@/components';
-import { ALL_POSTS_REQUEST_URL, FEATURED_POST_REQUEST_URL } from '@/constants/api';
+import { ALL_POSTS_REQUEST_URL_WITH_LIMIT, FEATURED_POST_REQUEST_URL } from '@/constants/api';
 import useQueryData from '@/hooks/useQueryData';
 import useQueryDataArray from '@/hooks/useQueryDataArray';
 import { Post } from '@/types/models/posts';
@@ -17,7 +17,7 @@ const FeaturedPost: React.FC = () => {
     data: posts,
     isLoading: isPostsLoading,
     error: errorPosts,
-  } = useQueryDataArray<Post>(ALL_POSTS_REQUEST_URL);
+  } = useQueryDataArray<Post>(ALL_POSTS_REQUEST_URL_WITH_LIMIT);
 
   const {
     data: featuredPost,

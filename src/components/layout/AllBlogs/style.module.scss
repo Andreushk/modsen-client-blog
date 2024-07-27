@@ -1,0 +1,43 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.all_blogs {
+  position: relative;
+  min-height: 800px;
+  padding: $s64px $s80px 0 $s80px;
+
+  @media (max-width: $mobileL) {
+    padding: $s64px $s56px 0 $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px 0 $s24px;
+  }
+
+  & > h1 {
+    text-transform: capitalize;
+  }
+
+  &_divider {
+    height: 1px;
+    background-color: $color-medium-gray-32;
+    margin-top: $s32px;
+    margin-bottom: $s64px;
+
+    @media (max-width: $tabletM) {
+      margin-top: $s24px;
+      margin-bottom: $s48px;
+    }
+
+    @media (max-width: $mobileL) {
+      margin-top: $s8px;
+    }
+  }
+
+  &_posts {
+    display: flex;
+    flex-direction: column;
+    gap: $s64px;
+  }
+}

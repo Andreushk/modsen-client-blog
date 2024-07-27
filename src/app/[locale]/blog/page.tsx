@@ -1,5 +1,11 @@
-import { BlogHeader } from '@/components';
+import { AllBlogs, BlogHeader, JoinOurTeam } from '@/components';
 
-const Blog: React.FC = () => <BlogHeader />;
+const Blog: React.FC = () => (
+  <>
+    <BlogHeader />
+    <AllBlogs />
+    <JoinOurTeam />
+  </>
+);
 
 export default Blog;

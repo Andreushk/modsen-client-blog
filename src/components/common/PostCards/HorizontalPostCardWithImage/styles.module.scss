@@ -1,0 +1,65 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.post_card {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: $s32px;
+
+  @media (max-width: $tabletM) {
+    gap: $s24px;
+  }
+
+  @media (max-width: $tabletS) {
+    flex-direction: column;
+  }
+
+  &_image {
+    flex: 1 1 38.28%;
+    height: 318px;
+
+    @media (max-width: $tabletM) {
+      flex: 1 1 25%;
+    }
+
+    @media (max-width: $tabletS) {
+      flex: unset;
+      width: 100%;
+      height: auto;
+    }
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &_information {
+    flex: 1 1 48.75%;
+
+    @media (max-width: $tabletM) {
+      flex: 1 1 70%;
+    }
+
+    @media (max-width: $tabletS) {
+      flex: unset;
+    }
+
+    & > p:first-of-type {
+      color: $color-purple;
+    }
+
+    & > h2 {
+      margin-top: $s20px;
+      margin-bottom: $s16px;
+
+      @media (max-width: $tabletS) {
+        margin-top: $s8px;
+        margin-bottom: $s8px;
+      }
+    }
+  }
+}

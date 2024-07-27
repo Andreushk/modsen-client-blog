@@ -21,7 +21,7 @@ const ListOfAuthors: React.FC = () => {
 
   return (
     <section className={styles.authors_section}>
-      <h2>{t('authors_list')}</h2>
+      <h2>{t('authors-list')}</h2>
       <div className={styles.list_container}>
         {isLoading && <LoadingAuthorCards />}
         {data &&
