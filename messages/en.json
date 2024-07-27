@@ -8,6 +8,11 @@
 
     "video-button": "Video about us"
   },
+  "Footer": {
+    "title": "Subscribe to our news letter to get latest updates and news",
+    "placeholder": "Enter your email",
+    "button": "Subscribe"
+  },
   "HomePage": {
     "hero": {
       "posted": "Posted on",

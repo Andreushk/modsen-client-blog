@@ -1,25 +1,15 @@
 import Image from 'next/image';
 import React from 'react';
 
-import FacebookIcon from '@/assets/icons/facebook.svg';
-import InstagramIcon from '@/assets/icons/instagram.svg';
-import LinkedInIcon from '@/assets/icons/linkedin.svg';
-import TwitterIcon from '@/assets/icons/twitter.svg';
 import { Paragraph } from '@/components';
 import { AppRoutes } from '@/constants/routes';
+import SOCIAL_MEDIA_ICONS from '@/constants/socialMediaIcons';
 import { Link } from '@/navigation';
 import { Author, SocialMediasType } from '@/types/models/authors';
 
 import styles from './styles.module.scss';
 
 type ComponentProps = Omit<Author, 'description' | 'postIds'>;
-
-const SocialMediaIcons: Record<SocialMediasType, React.ReactNode> = {
-  facebook: <FacebookIcon />,
-  twitter: <TwitterIcon />,
-  instagram: <InstagramIcon />,
-  linkedin: <LinkedInIcon />,
-};
 
 const AuthorCard: React.FC<ComponentProps> = ({ id, name, profileImageId, socialLinks }) => (
   <Link href={`${AppRoutes.AUTHOR}/${id}`}>
@@ -42,7 +32,7 @@ const AuthorCard: React.FC<ComponentProps> = ({ id, name, profileImageId, social
         {Object.entries(socialLinks).map(([iconName, linkValue]) => (
           <Link key={iconName} href={linkValue}>
             <div className={styles.social_media_item_container}>
-              {SocialMediaIcons[iconName as SocialMediasType]}
+              {SOCIAL_MEDIA_ICONS[iconName as SocialMediasType]}
             </div>
           </Link>
         ))}

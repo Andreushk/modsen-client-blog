@@ -1,0 +1,23 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.footer_navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $laptopS) {
+    flex-direction: column;
+    gap: $s16px;
+  }
+
+  @media (max-width: $mobileL) {
+    gap: $s32px;
+
+    & > nav > ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

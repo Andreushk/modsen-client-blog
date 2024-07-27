@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 
 import { Testimonial } from '@/types/models/testimonials';
 
@@ -18,7 +18,7 @@ const Slider: React.FC<ComponentProps> = ({ testimonials }) => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAnimationGoing, setIsAnimationGoing] = useState<boolean>(false);
 
-  const handlePrevButtonClick = useCallback((): void => {
+  const handlePrevButtonClick = (): void => {
     setIsAnimationGoing(true);
 
     const timerId = setTimeout((): void => {
@@ -26,9 +26,9 @@ const Slider: React.FC<ComponentProps> = ({ testimonials }) => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
       setIsAnimationGoing(false);
     }, DURATION_OF_ANIMATION);
-  }, [testimonials]);
+  };
 
-  const handleNextButtonClick = useCallback((): void => {
+  const handleNextButtonClick = (): void => {
     setIsAnimationGoing(true);
 
     const timerId = setTimeout((): void => {
@@ -36,7 +36,7 @@ const Slider: React.FC<ComponentProps> = ({ testimonials }) => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
       setIsAnimationGoing(false);
     }, DURATION_OF_ANIMATION);
-  }, [testimonials]);
+  };
 
   return (
     <div className={styles.slider}>

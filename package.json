@@ -16,10 +16,14 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@hookform/resolvers": "^3.9.0",
     "next": "14.2.5",
     "next-intl": "^3.17.2",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hook-form": "^7.52.1",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.2.5",

@@ -2,9 +2,12 @@
 @import '@/styles/colors.scss';
 
 body {
-  max-width: 1440px;
   background-color: $color-white;
   padding-top: $s80px;
+}
+
+main {
+  max-width: 1440px;
   margin: 0 auto;
 }
 

@@ -4,7 +4,7 @@ import '@/styles/global.scss';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
-import { Header } from '@/components';
+import { Footer, Header } from '@/components';
 import { sen } from '@/styles/fonts';
 
 export const metadata: Metadata = {
@@ -26,6 +26,7 @@ const RootLayout: React.FC<LayoutProps> = ({ children, params }) => {
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main>{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

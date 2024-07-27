@@ -71,6 +71,10 @@
 .social_media_item_container {
   transition: $d150ms ease-in-out;
 
+  & svg {
+    fill: $color-dark-blue;
+  }
+
   &:hover {
     transform: scale(1.2);
   }

@@ -1,0 +1,17 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.footer {
+  background-color: $color-dark-blue;
+
+  &_content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: $s52px $s80px $s56px $s80px;
+
+    @media (max-width: $mobileL) {
+      padding: $s52px 0;
+    }
+  }
+}
