@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
-import { Button, Label, Paragraph } from '@/components';
+import { Button, Label, Paragraph, ReadMoreButtonContainer } from '@/components';
 import { AppRoutes } from '@/constants/routes';
 import { Link } from '@/navigation';
 import { Post } from '@/types/models/posts';
@@ -25,9 +25,9 @@ const VerticalPostCardWithImage: React.FC<ComponentProps> = ({ post }) => {
       </Label>
       <h3>{post.title}</h3>
       <Paragraph style="dark">{post.shortDescription}</Paragraph>
-      <div className={styles.read_more_button}>
+      <ReadMoreButtonContainer>
         <Button styleType="yellow">{t('featured.read-more')}</Button>
-      </div>
+      </ReadMoreButtonContainer>
     </article>
   );
 };

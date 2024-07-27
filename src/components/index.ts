@@ -10,6 +10,7 @@ export { default as Overlay } from './common/Overlay';
 export { default as Paragraph } from './common/Paragraph';
 export { default as VerticalPostCardWithImage } from './common/PostCards/VerticalPostCardWithImage';
 export { default as VerticalPostCardWithoutImage } from './common/PostCards/VerticalPostCardWithoutImage';
+export { default as ReadMoreButtonContainer } from './common/ReadMoreButtonContainer';
 export { default as Spinner } from './common/Spinner';
 export { default as AboutAndMission } from './layout/AboutAndMission';
 export { default as ChooseCategory } from './layout/ChooseCategory';

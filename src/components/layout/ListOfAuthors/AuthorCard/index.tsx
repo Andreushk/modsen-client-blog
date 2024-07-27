@@ -4,16 +4,22 @@ import React from 'react';
 import { Paragraph } from '@/components';
 import { AppRoutes } from '@/constants/routes';
 import SOCIAL_MEDIA_ICONS from '@/constants/socialMediaIcons';
-import { Link } from '@/navigation';
+import { Link, useRouter } from '@/navigation';
 import { Author, SocialMediasType } from '@/types/models/authors';
 
 import styles from './styles.module.scss';
 
 type ComponentProps = Omit<Author, 'description' | 'postIds'>;
 
-const AuthorCard: React.FC<ComponentProps> = ({ id, name, profileImageId, socialLinks }) => (
-  <Link href={`${AppRoutes.AUTHOR}/${id}`}>
-    <div className={styles.author_card}>
+const AuthorCard: React.FC<ComponentProps> = ({ id, name, profileImageId, socialLinks }) => {
+  const router = useRouter();
+
+  const handleCardClick = (): void => {
+    router.push(`${AppRoutes.AUTHOR}/${id}`);
+  };
+
+  return (
+    <div className={styles.author_card} onClick={handleCardClick}>
       <div className={styles.author_card_image_circle_container}>
         <div>
           <Image
@@ -38,7 +44,7 @@ const AuthorCard: React.FC<ComponentProps> = ({ id, name, profileImageId, social
         ))}
       </div>
     </div>
-  </Link>
-);
+  );
+};
 
 export default React.memo(AuthorCard);

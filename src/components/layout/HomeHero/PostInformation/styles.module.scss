@@ -79,13 +79,3 @@
     }
   }
 }
-
-.read_more_button {
-  width: 204px;
-  height: 56px;
-  margin-top: $s48px;
-
-  @media (max-width: $mobileL) {
-    margin-top: $s32px;
-  }
-}

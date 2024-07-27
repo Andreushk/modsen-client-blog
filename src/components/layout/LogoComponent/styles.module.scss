@@ -6,7 +6,7 @@
   align-items: center;
   gap: $s80px;
 
-  & > svg:last-of-type {
+  & > div:last-of-type {
     margin-right: $s80px;
   }
 }
@@ -15,7 +15,7 @@
   .logos_container {
     gap: $s56px;
 
-    & > svg:last-of-type {
+    & > div:last-of-type {
       margin-right: $s56px;
     }
   }
@@ -25,7 +25,7 @@
   .logos_container {
     gap: $s24px;
 
-    & > svg:last-of-type {
+    & > div:last-of-type {
       margin-right: $s24px;
     }
   }

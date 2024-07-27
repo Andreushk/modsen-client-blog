@@ -1,0 +1,12 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.more_button_container {
+  width: 204px;
+  height: 56px;
+  margin-top: $s48px;
+
+  @media (max-width: $mobileL) {
+    margin-top: $s32px;
+  }
+}

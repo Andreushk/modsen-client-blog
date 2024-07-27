@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 
-import { Button, Caption, Paragraph } from '@/components';
+import { Button, Caption, Paragraph, ReadMoreButtonContainer } from '@/components';
 import { AppRoutes } from '@/constants/routes';
 import { Link } from '@/navigation';
 import { inter } from '@/styles/fonts';
@@ -30,9 +30,9 @@ const PostInformation: React.FC<ComponentProps> = ({ post }) => {
             {post.createdAt}
           </span>
           <Paragraph style="light">{post.shortDescription}</Paragraph>
-          <div className={styles.read_more_button}>
+          <ReadMoreButtonContainer>
             <Button styleType="yellow">{t('hero.read-more')}</Button>
-          </div>
+          </ReadMoreButtonContainer>
         </div>
       </div>
     </>
