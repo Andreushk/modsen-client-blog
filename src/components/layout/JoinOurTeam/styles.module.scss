@@ -1,0 +1,39 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.join_us {
+  max-width: 414px;
+  margin: 0 auto;
+  margin-bottom: $s128px;
+
+  @media (max-width: $mobileL) {
+    max-width: 100%;
+    padding-left: $s56px;
+    padding-right: $s56px;
+    margin-bottom: $s80px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding-left: $s24px;
+    padding-right: $s24px;
+    margin-bottom: $s56px;
+  }
+
+  & > h2,
+  p {
+    text-align: center;
+  }
+
+  & > p {
+    margin-top: $s16px;
+    margin-bottom: $s32px;
+  }
+
+  &_button {
+    width: fit-content;
+    min-width: 174px;
+    height: 56px;
+    margin: 0 auto;
+    text-transform: capitalize;
+  }
+}

@@ -3,6 +3,7 @@ import {
   ChooseCategory,
   FeaturedPost,
   HomeHero,
+  JoinOurTeam,
   ListOfAuthors,
   LogoComponent,
   SpecialPost,
@@ -19,6 +20,7 @@ const Home: React.FC = () => (
     <ListOfAuthors />
     <LogoComponent />
     <Testimonials />
+    <JoinOurTeam />
   </>
 );
 
