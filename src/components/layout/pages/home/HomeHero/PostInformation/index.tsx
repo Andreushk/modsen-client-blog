@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 
 import { Button, Caption, Paragraph, ReadMoreButtonContainer } from '@/components';
 import { AppRoutes } from '@/constants/routes';
-import { Link } from '@/navigation';
+import { Link, useRouter } from '@/navigation';
 import { inter } from '@/styles/fonts';
 import { Post } from '@/types/models/posts';
 
@@ -14,7 +14,12 @@ interface ComponentProps {
 }
 
 const PostInformation: React.FC<ComponentProps> = ({ post }) => {
+  const router = useRouter();
   const t = useTranslations('HomePage');
+
+  const handleReadMoreButtonClick = (): void => {
+    router.push(`${AppRoutes.BLOG_POST}/${post.id}`);
+  };
 
   return (
     <>
@@ -31,7 +36,9 @@ const PostInformation: React.FC<ComponentProps> = ({ post }) => {
           </span>
           <Paragraph style="light">{post.shortDescription}</Paragraph>
           <ReadMoreButtonContainer>
-            <Button styleType="yellow">{t('hero.read-more')}</Button>
+            <Button styleType="yellow" onClick={handleReadMoreButtonClick}>
+              {t('hero.read-more')}
+            </Button>
           </ReadMoreButtonContainer>
         </div>
       </div>

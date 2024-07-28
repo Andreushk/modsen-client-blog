@@ -1,0 +1,18 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.what_to_read_next_posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $s32px;
+  margin-top: $s64px;
+
+  @media (max-width: $laptopS) {
+    gap: $s56px;
+    margin-top: $s48px;
+  }
+
+  & > article {
+    flex: 1 1 405px;
+  }
+}

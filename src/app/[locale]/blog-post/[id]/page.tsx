@@ -1,4 +1,4 @@
-import { Blog } from '@/components';
+import { Blog, JoinOurTeam, OtherPosts } from '@/components';
 
 interface ComponentProps {
   params: {
@@ -6,6 +6,12 @@ interface ComponentProps {
   };
 }
 
-const BlogPost: React.FC<ComponentProps> = ({ params }) => <Blog id={params.id} />;
+const BlogPost: React.FC<ComponentProps> = ({ params }) => (
+  <>
+    <Blog id={params.id} />
+    <OtherPosts excludePostId={params.id} />
+    <JoinOurTeam />
+  </>
+);
 
 export default BlogPost;

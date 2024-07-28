@@ -61,5 +61,8 @@
       "prev": "< Предыдущий"
     },
     "all-categories": "Все категории"
+  },
+  "BlogPostPage": {
+    "what-to-read-next": "Читать далее"
   }
 }

@@ -22,6 +22,7 @@ export { default as AllBlogs } from './layout/pages/blog/AllBlogs';
 export { default as BlogCategories } from './layout/pages/blog/BlogCategories';
 export { default as BlogHeader } from './layout/pages/blog/BlogHeader';
 export { default as Blog } from './layout/pages/blog-post/Blog';
+export { default as OtherPosts } from './layout/pages/blog-post/Blog/OtherPosts';
 export { default as AboutAndMission } from './layout/pages/home/AboutAndMission';
 export { default as ChooseCategory } from './layout/pages/home/ChooseCategory';
 export { default as FeaturedPost } from './layout/pages/home/FeaturedPost';
