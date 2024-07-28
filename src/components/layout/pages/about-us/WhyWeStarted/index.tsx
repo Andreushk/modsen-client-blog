@@ -5,16 +5,21 @@ import { Paragraph } from '@/components';
 
 import styles from './styles.module.scss';
 
-const IMAGE_PATH = '/images/arms.jpg';
-const IMAGE_ALT = 'Team members joining hands to show their collaborative spirit and unity';
+const IMAGE_PATH = '/images/team-at-stairs.jpg';
+const IMAGE_ALT =
+  'A team of colleagues sitting on steps outside an office, engaged in discussion and collaboration';
 
-const KnowMoreAboutOurTeam: React.FC = () => {
+const WhyWeStarted: React.FC = () => {
   const t = useTranslations('AboutUsPage');
 
   return (
     <section className={styles.know_more_about_our_team}>
+      <div className={styles.know_more_about_our_team_image}>
+        <Image src={IMAGE_PATH} width={624} height={480} quality={50} alt={IMAGE_ALT} />
+        <div />
+      </div>
       <div className={styles.know_more_about_our_team_information}>
-        <h2>{t('know-more-about-our-team.title')}</h2>
+        <h2>{t('why-we-started.title')}</h2>
         <h4>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
         </h4>
@@ -25,12 +30,8 @@ const KnowMoreAboutOurTeam: React.FC = () => {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat.
         </Paragraph>
       </div>
-      <div className={styles.know_more_about_our_team_image}>
-        <Image src={IMAGE_PATH} width={624} height={480} quality={50} alt={IMAGE_ALT} />
-        <div />
-      </div>
     </section>
   );
 };
 
-export default KnowMoreAboutOurTeam;
+export default WhyWeStarted;

@@ -3,7 +3,7 @@
 @import '@/styles/colors.scss';
 
 .know_more_about_our_team {
-  padding: $s128px $s80px;
+  padding: 0 $s80px;
   display: flex;
   align-items: center;
   gap: 10.7%;
@@ -40,6 +40,7 @@
     height: 480px;
 
     @media (max-width: $laptopM) {
+      order: 2;
       flex: unset;
       width: 60%;
       height: auto;
@@ -62,25 +63,19 @@
 
     & > div {
       position: absolute;
-      top: $s114px;
-      left: -$s56px;
-      background: $color-yellow;
-      border-top-left-radius: 42px;
-      width: 103px;
-      height: 116px;
+      bottom: -$s37px;
+      left: $s108px;
+      background: $color-purple;
+      border-radius: 50%;
+      width: 74px;
+      height: 74px;
 
       @media (max-width: $mobileL) {
-        left: -$s24px;
-        width: 70px;
-        height: 90px;
-      }
-
-      @media (max-width: $mobileM) {
-        left: auto;
+        left: unset;
         right: $s24px;
-        top: -$s24px;
-        width: 70px;
-        height: 90px;
+        width: 48px;
+        height: 48px;
+        bottom: -$s24px;
       }
     }
   }

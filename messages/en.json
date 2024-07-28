@@ -85,6 +85,12 @@
         "caption": "Our vision",
         "title": "A platform that empowers individuals to improve"
       }
+    },
+    "know-more-about-our-team": {
+      "title": "Our team of creatives"
+    },
+    "why-we-started": {
+      "title": "Why we started this Blog"
     }
   }
 }
