@@ -65,5 +65,26 @@
   },
   "BlogPostPage": {
     "what-to-read-next": "What to read next"
+  },
+  "AboutUsPage": {
+    "about-us-header": {
+      "caption": "About us",
+      "title": "We are a team of content writers who share their learnings"
+    },
+    "overview": {
+      "statistics": {
+        "blogs-published": "Blogs Published",
+        "views-on-finsweet": "Views on Finsweet",
+        "total-active-users": "Total active users"
+      },
+      "mission": {
+        "caption": "Our mission",
+        "title": "Creating valuable content for creatives all around the world"
+      },
+      "vision": {
+        "caption": "Our vision",
+        "title": "A platform that empowers individuals to improve"
+      }
+    }
   }
 }

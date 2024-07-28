@@ -1,0 +1,57 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.about_us_header {
+  padding: $s80px $s188px 0 $s188px;
+  display: flex;
+  align-items: center;
+  gap: $s32px;
+
+  @media (max-width: $desktopS) {
+    gap: $s16px;
+    padding: $s80px $s80px 0 $s118px;
+  }
+
+  @media (max-width: $laptopS) {
+    gap: 0;
+    padding: $s80px $s80px 0 $s80px;
+  }
+
+  @media (max-width: $tabletM) {
+    gap: $s24px;
+    flex-direction: column;
+  }
+
+  @media (max-width: $mobileL) {
+    padding: $s80px $s56px 0 $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px 0 $s24px;
+  }
+
+  &_title {
+    position: relative;
+    z-index: 2;
+    flex: 1 1 55.08%;
+    padding: $s64px;
+    background-color: $color-white;
+
+    @media (max-width: $desktopS) {
+      padding: $s56px;
+    }
+
+    @media (max-width: $tabletM) {
+      padding: 0;
+    }
+
+    & > h1 {
+      margin-top: $s16px;
+    }
+  }
+
+  &_description {
+    flex: 1 1 42.1%;
+  }
+}

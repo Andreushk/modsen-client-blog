@@ -64,5 +64,26 @@
   },
   "BlogPostPage": {
     "what-to-read-next": "Читать далее"
+  },
+  "AboutUsPage": {
+    "about-us-header": {
+      "caption": "О нас",
+      "title": "Мы - команда авторов, которые делятся своими знаниями"
+    },
+    "overview": {
+      "statistics": {
+        "blogs-published": "Блогов опубликованно",
+        "views-on-finsweet": "Просмотров на Finsweet",
+        "total-active-users": "Активных пользователей"
+      },
+      "mission": {
+        "caption": "Наша миссия",
+        "title": "Создание ценного контента для творческих людей по всему миру"
+      },
+      "vision": {
+        "caption": "Наше видение",
+        "title": "Платформа, позволяющая людям совершенствоваться"
+      }
+    }
   }
 }
