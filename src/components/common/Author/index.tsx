@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
 
-import Paragraph from '@/components/common/Paragraph';
+import { Paragraph } from '@/components';
+import { AppRoutes } from '@/constants/routes';
+import { Link } from '@/navigation';
 
 import styles from './styles.module.scss';
 
@@ -9,19 +11,22 @@ const AUTHOR_IMAGE_PATH = '/images/testimonials_author.png';
 
 interface ComponentProps {
   name: string;
-  location: string;
-  isAnimationGoing: boolean;
+  subtitle: string;
+  authorId?: number;
 }
 
-const Author: React.FC<ComponentProps> = ({ name, location, isAnimationGoing }) => (
-  <div className={`${styles.slider_author} ${isAnimationGoing ? '' : styles.active}`}>
+const Author: React.FC<ComponentProps> = ({ name, subtitle, authorId }) => (
+  <div className={`${styles.author}`}>
     <div>
       <Image src={AUTHOR_IMAGE_PATH} width={48} height={48} alt="Author picture" />
     </div>
     <div>
-      <h4>{name}</h4>
+      <h4>
+        {authorId && <Link href={`${AppRoutes.AUTHOR}/${authorId}`}>{name}</Link>}
+        {!authorId && name}
+      </h4>
       <Paragraph style="dark" small>
-        {location}
+        {subtitle}
       </Paragraph>
     </div>
   </div>

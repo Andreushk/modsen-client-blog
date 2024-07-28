@@ -1,0 +1,16 @@
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: $s16px;
+
+  & > div:last-of-type > h4 > a {
+    color: $color-purple;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
