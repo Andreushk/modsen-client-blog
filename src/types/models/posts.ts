@@ -1,3 +1,5 @@
+import { CategoriesType } from '../categories';
+
 export interface PostContent {
   h3: string;
   paragraph: string;
@@ -10,6 +12,6 @@ export interface Post {
   authorId: number;
   createdAt: number;
   shortDescription: string;
-  category: string;
+  category: CategoriesType;
   content: PostContent[];
 }
