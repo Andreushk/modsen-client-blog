@@ -19,6 +19,7 @@ export { default as Footer } from './layout/Footer';
 export { default as Header } from './layout/Header';
 export { default as JoinOurTeam } from './layout/JoinOurTeam';
 export { default as AboutUsHeader } from './layout/pages/about-us/AboutUsHeader';
+export { default as KnowMoreAboutOurTeam } from './layout/pages/about-us/KnowMoreAboutOurTeam';
 export { default as Overview } from './layout/pages/about-us/Overview';
 export { default as AllBlogs } from './layout/pages/blog/AllBlogs';
 export { default as BlogCategories } from './layout/pages/blog/BlogCategories';
