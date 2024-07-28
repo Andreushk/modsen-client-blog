@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 
 import { Paragraph } from '@/components';
-import { AUTHORS_PATH } from '@/constants/api';
+import { AUTHORS_REQUEST_URL } from '@/constants/api';
 import useQueryDataArray from '@/hooks/useQueryDataArray';
 import { Author } from '@/types/models/authors';
 
@@ -11,13 +11,18 @@ import AuthorCard from './AuthorCard';
 import LoadingAuthorCards from './LoadingAuthorCards';
 import styles from './styles.module.scss';
 
-const AUTHORS_LIMIT = 4;
-const REQUEST_URL = `${process.env.NEXT_PUBLIC_SERVER_URL}${AUTHORS_PATH}?_limit=${AUTHORS_LIMIT}`;
+interface ComponentProps {
+  amountOfAuthors?: number;
+}
 
-const ListOfAuthors: React.FC = () => {
+const AUTHORS_LIMIT = 4;
+
+const ListOfAuthors: React.FC<ComponentProps> = ({ amountOfAuthors }) => {
   const t = useTranslations('HomePage');
 
-  const { data, isLoading, error } = useQueryDataArray<Author>(REQUEST_URL);
+  const { data, isLoading, error } = useQueryDataArray<Author>(
+    `${AUTHORS_REQUEST_URL}?_limit=${amountOfAuthors ?? AUTHORS_LIMIT}`,
+  );
 
   return (
     <section className={styles.authors_section}>

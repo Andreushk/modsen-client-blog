@@ -18,6 +18,7 @@ export { default as Spinner } from './common/Spinner';
 export { default as Footer } from './layout/Footer';
 export { default as Header } from './layout/Header';
 export { default as JoinOurTeam } from './layout/JoinOurTeam';
+export { default as ListOfAuthors } from './layout/ListOfAuthors';
 export { default as AboutUsHeader } from './layout/pages/about-us/AboutUsHeader';
 export { default as KnowMoreAboutOurTeam } from './layout/pages/about-us/KnowMoreAboutOurTeam';
 export { default as Overview } from './layout/pages/about-us/Overview';
@@ -31,7 +32,6 @@ export { default as AboutAndMission } from './layout/pages/home/AboutAndMission'
 export { default as ChooseCategory } from './layout/pages/home/ChooseCategory';
 export { default as FeaturedPost } from './layout/pages/home/FeaturedPost';
 export { default as HomeHero } from './layout/pages/home/HomeHero';
-export { default as ListOfAuthors } from './layout/pages/home/ListOfAuthors';
 export { default as LogoComponent } from './layout/pages/home/LogoComponent';
 export { default as SpecialPost } from './layout/pages/home/SpecialPost';
 export { default as Testimonials } from './layout/pages/home/Testimonials';

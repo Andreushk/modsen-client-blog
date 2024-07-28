@@ -1,4 +1,11 @@
-import { AboutUsHeader, KnowMoreAboutOurTeam, Overview, WhyWeStarted } from '@/components';
+import {
+  AboutUsHeader,
+  JoinOurTeam,
+  KnowMoreAboutOurTeam,
+  ListOfAuthors,
+  Overview,
+  WhyWeStarted,
+} from '@/components';
 
 const AboutUs: React.FC = () => (
   <>
@@ -6,6 +13,8 @@ const AboutUs: React.FC = () => (
     <Overview />
     <KnowMoreAboutOurTeam />
     <WhyWeStarted />
+    <ListOfAuthors amountOfAuthors={8} />
+    <JoinOurTeam />
   </>
 );
 
