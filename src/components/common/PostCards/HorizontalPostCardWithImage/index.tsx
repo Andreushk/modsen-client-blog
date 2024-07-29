@@ -7,7 +7,7 @@ import getRandomPostImageURL from '@/utils/getRandomPostImageURL';
 
 import styles from './styles.module.scss';
 
-type SizeTypes = 'small' | 'regular';
+type SizeTypes = 'small' | 'medium' | 'large';
 
 interface ComponentProps {
   id: number;
@@ -22,14 +22,18 @@ const HorizontalPostCardWithImage: React.FC<ComponentProps> = ({
   category,
   title,
   description,
-  type = 'regular',
+  type = 'medium',
 }) => (
   <Link href={`${AppRoutes.BLOG_POST}/${id}`}>
     <article className={styles.post_card}>
-      <div className={`${styles.post_card_image} ${type === 'small' ? styles.small : ''}`}>
+      <div
+        className={`${styles.post_card_image} ${type === 'small' ? styles.small : ''} ${type === 'medium' ? styles.medium : ''} ${type === 'large' ? styles.large : ''}`}
+      >
         <Image src={getRandomPostImageURL()} width={490} height={318} alt="Blog thumbnail" />
       </div>
-      <div className={`${styles.post_card_information} ${type === 'small' ? styles.small : ''}`}>
+      <div
+        className={`${styles.post_card_information} ${type === 'small' ? styles.small : ''} ${type === 'medium' ? styles.medium : ''} ${type === 'large' ? styles.large : ''}`}
+      >
         <Caption style="dark">{category}</Caption>
         <h2>{title}</h2>
         <Paragraph style="dark">{description}</Paragraph>

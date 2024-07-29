@@ -17,9 +17,6 @@
   }
 
   &_image {
-    flex: 1 1 38.28%;
-    height: 318px;
-
     @media (max-width: $tabletM) {
       flex: 1 1 25%;
     }
@@ -36,6 +33,16 @@
       object-fit: cover;
     }
 
+    &.large {
+      flex: 1 1 40.23%;
+      height: 320px;
+    }
+
+    &.medium {
+      flex: 1 1 38.28%;
+      height: 318px;
+    }
+
     &.small {
       flex: 1 1 34.61%;
       height: 312px;
@@ -43,13 +50,6 @@
   }
 
   &_information {
-    flex: 1 1 48.75%;
-
-    &.small {
-      flex: 1 1 61.1%;
-      height: 312px;
-    }
-
     @media (max-width: $tabletM) {
       flex: 1 1 70%;
     }
@@ -70,6 +70,18 @@
         margin-top: $s8px;
         margin-bottom: $s8px;
       }
+    }
+
+    &.large {
+      flex: 1 1 56.64%;
+    }
+
+    &.medium {
+      flex: 1 1 48.75%;
+    }
+
+    &.small {
+      flex: 1 1 61.1%;
     }
   }
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { AuthorHeader } from '@/components';
+import { AuthorHeader, MyBlog } from '@/components';
 
 interface ComponentProps {
   params: {
@@ -11,7 +11,12 @@ interface ComponentProps {
 const Page: React.FC<ComponentProps> = ({ params }) => {
   const { id } = params;
 
-  return <AuthorHeader id={id} />;
+  return (
+    <>
+      <AuthorHeader id={id} />
+      <MyBlog postsAuthorId={id} />
+    </>
+  );
 };
 
 export default Page;

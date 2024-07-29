@@ -26,6 +26,7 @@ export { default as KnowMoreAboutOurTeam } from './layout/pages/about-us/KnowMor
 export { default as Overview } from './layout/pages/about-us/Overview';
 export { default as WhyWeStarted } from './layout/pages/about-us/WhyWeStarted';
 export { default as AuthorHeader } from './layout/pages/author/AuthorHeader';
+export { default as MyBlog } from './layout/pages/author/MyBlog';
 export { default as AllBlogs } from './layout/pages/blog/AllBlogs';
 export { default as BlogCategories } from './layout/pages/blog/BlogCategories';
 export { default as BlogHeader } from './layout/pages/blog/BlogHeader';
