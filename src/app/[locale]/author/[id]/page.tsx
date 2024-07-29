@@ -1,11 +1,7 @@
-'use client';
-
 import { AuthorHeader, MyBlog } from '@/components';
 
 interface ComponentProps {
-  params: {
-    id: string;
-  };
+  params: { id: string };
 }
 
 const Page: React.FC<ComponentProps> = ({ params }) => {

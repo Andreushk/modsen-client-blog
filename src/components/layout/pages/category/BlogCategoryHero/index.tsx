@@ -1,18 +1,16 @@
-'use client';
-
-import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
 import Caption from '@/components/common/Caption';
 import Paragraph from '@/components/common/Paragraph';
-import { AppRoutesQueryParameters } from '@/constants/routes';
 
 import styles from './styls.module.scss';
 
-const BlogCategoryHero: React.FC = () => {
+interface ComponentProps {
+  category: string;
+}
+
+const BlogCategoryHero: React.FC<ComponentProps> = ({ category }) => {
   const t = useTranslations('CategoryPage');
-  const searchParams = useSearchParams();
-  const category = searchParams.get(AppRoutesQueryParameters.CATEGORY);
 
   return (
     <section className={styles.blog_category_hero}>

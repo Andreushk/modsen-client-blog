@@ -1,3 +1,5 @@
+'use client';
+
 import { Label } from '@/components';
 import { AppRoutes } from '@/constants/routes';
 import { Link, useRouter } from '@/navigation';

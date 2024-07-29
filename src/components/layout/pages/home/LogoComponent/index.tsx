@@ -1,5 +1,3 @@
-'use client';
-
 import { Looper } from '@/components';
 
 import PARTNERS_OPTIONS from './options';

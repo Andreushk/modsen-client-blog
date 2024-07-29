@@ -3,7 +3,6 @@ import { useTranslations } from 'next-intl';
 import React, { useCallback } from 'react';
 
 import { Catagories } from '@/components';
-import { AppRoutesQueryParameters } from '@/constants/routes';
 import { CategoriesType } from '@/types/categories';
 
 import SearchInput from './SearchInput';
@@ -21,15 +20,17 @@ const Filters: React.FC<ComponentProps> = ({ searchInputValue, onSearchInputChan
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
-  const categoryFromURL = searchParams.get(
-    AppRoutesQueryParameters.CATEGORY,
-  ) as CategoriesType | null;
+  const categoryFromURL = pathname.split('/').pop();
 
   const handleCategoryClick = useCallback(
     (clickedCategory: CategoriesType): void => {
       const params = new URLSearchParams(searchParams);
-      params.set(AppRoutesQueryParameters.CATEGORY, clickedCategory);
-      replace(`${pathname}?${params}`, { scroll: false });
+
+      const pathnameParts = pathname.split('/');
+      pathnameParts[pathnameParts.length - 1] = clickedCategory;
+      const newPath = pathnameParts.join('/');
+
+      replace(`${newPath}?${params}`, { scroll: false });
     },
     [pathname, replace, searchParams],
   );
@@ -41,7 +42,7 @@ const Filters: React.FC<ComponentProps> = ({ searchInputValue, onSearchInputChan
         <h2>{t('filters.categories')}</h2>
         <Catagories
           type="small"
-          selectedCategory={categoryFromURL}
+          selectedCategory={categoryFromURL as CategoriesType}
           onCategoryClick={handleCategoryClick}
         />
       </div>

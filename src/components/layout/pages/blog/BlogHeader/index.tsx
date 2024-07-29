@@ -1,21 +1,41 @@
-'use client';
+import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 
-import { Paragraph, Spinner } from '@/components';
+import fetchData from '@/api/fetchData';
+import { Button, Caption, Label, Paragraph, ReadMoreButtonContainer } from '@/components';
 import { HERO_POST_REQUEST_URL } from '@/constants/api';
-import useQueryData from '@/hooks/useQueryData';
+import { AppRoutes } from '@/constants/routes';
+import { Link } from '@/navigation';
 import { Post } from '@/types/models/posts';
 
-import FeaturedPost from './FeaturedPost';
 import styles from './styles.module.scss';
 
-const BlogHeader: React.FC = () => {
-  const { data, isLoading, error } = useQueryData<Post>(HERO_POST_REQUEST_URL);
+const BlogHeader: React.FC = async () => {
+  const t = await getTranslations('BlogPage');
+  const post = await fetchData<Post>(HERO_POST_REQUEST_URL);
 
   return (
     <section className={styles.blog_header}>
-      {isLoading && <Spinner />}
-      {data && <FeaturedPost post={data} />}
-      {error && <Paragraph style="dark">{error}</Paragraph>}
+      <div className={styles.blog_header_information}>
+        <Caption style="dark">{t('featured-post.caption')}</Caption>
+        <h2>{post.title}</h2>
+        <Label>
+          By <Link href={`${AppRoutes.AUTHOR}/${post.authorId}`}>{post.author}</Link> l{' '}
+          {post.createdAt}{' '}
+        </Label>
+        <Paragraph style="dark">{post.shortDescription}</Paragraph>
+        <ReadMoreButtonContainer>
+          <Button styleType="yellow">{t('featured-post.read-more')}</Button>
+        </ReadMoreButtonContainer>
+      </div>
+      <div className={styles.blog_header_image}>
+        <Image
+          src="/images/man-behind-computer.jpg"
+          width={515}
+          height={359}
+          alt="Post thumbnail"
+        />
+      </div>
     </section>
   );
 };

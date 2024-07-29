@@ -1,7 +1,7 @@
 'use client';
 
 import { Paragraph } from '@/components';
-import { AppRoutes, AppRoutesQueryParameters } from '@/constants/routes';
+import { AppRoutes } from '@/constants/routes';
 import { Link } from '@/navigation';
 import { CategoriesType } from '@/types/categories';
 
@@ -46,11 +46,7 @@ const Item: React.FC<CategoryItemProps> = ({
   return (
     <>
       {onClick && category}
-      {!onClick && (
-        <Link href={`${AppRoutes.CATEGORY}?${AppRoutesQueryParameters.CATEGORY}=${title}`}>
-          {category}
-        </Link>
-      )}
+      {!onClick && <Link href={`${AppRoutes.CATEGORY}/${title}`}>{category}</Link>}
     </>
   );
 };

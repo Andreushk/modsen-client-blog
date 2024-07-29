@@ -1,6 +1,6 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 
 import { POSTS_PATH, SERVER_URL } from '@/constants/api';
@@ -15,7 +15,9 @@ import styles from './styles.module.scss';
 
 const CategorySection: React.FC = () => {
   const searchParams = useSearchParams();
-  const categoryFromURL = searchParams.get(AppRoutesQueryParameters.CATEGORY);
+  const pathname = usePathname();
+
+  const categoryFromURL = pathname.split('/').pop();
   const tagFromURL = searchParams.get(AppRoutesQueryParameters.TAG);
 
   const [searchInputValue, setSearchInputValue] = useState<string>(tagFromURL ?? '');
