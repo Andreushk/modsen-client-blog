@@ -36,8 +36,14 @@ const AllBlogs: React.FC = () => {
       {data && (
         <>
           <div className={styles.all_blogs_posts}>
-            {data.map((postData) => (
-              <HorizontalPostCardWithImage key={postData.id} post={postData} />
+            {data.map(({ id, title, category, shortDescription }) => (
+              <HorizontalPostCardWithImage
+                key={id}
+                id={id}
+                title={title}
+                category={category}
+                description={shortDescription}
+              />
             ))}
           </div>
           <Buttons

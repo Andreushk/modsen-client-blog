@@ -15,7 +15,17 @@ interface ComponentProps {
 const Posts: React.FC<ComponentProps> = ({ posts, isLoading, error }) => (
   <div className={styles.posts}>
     {isLoading && <LoadingPosts />}
-    {posts && posts.length > 0 && posts.map((post) => <HorizontalPostCardWithImage post={post} />)}
+    {posts &&
+      posts.length > 0 &&
+      posts.map(({ id, title, category, shortDescription }) => (
+        <HorizontalPostCardWithImage
+          id={id}
+          title={title}
+          category={category}
+          description={shortDescription}
+          type="small"
+        />
+      ))}
     {error && <Paragraph style="dark">{error}</Paragraph>}
   </div>
 );

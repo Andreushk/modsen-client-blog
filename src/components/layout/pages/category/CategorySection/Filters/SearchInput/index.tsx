@@ -8,7 +8,7 @@ import { sen } from '@/styles/fonts';
 
 import styles from './styles.module.scss';
 
-const SearchInput: React.FС = () => {
+const SearchInput: React.FC = () => {
   const t = useTranslations('CategoryPage');
   const searchInputRef = useRef<HTMLInputElement>(null);
   const searchParams = useSearchParams();

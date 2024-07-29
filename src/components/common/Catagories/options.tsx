@@ -6,7 +6,7 @@ import { BUSINESS, ECONOMY, STARTUP, TECHNOLOGY } from '@/constants/categories';
 
 import { CategoryItemProps } from './Item';
 
-type CategoryOptionsType = Omit<CategoryItemProps, 'selected'>;
+type CategoryOptionsType = Omit<CategoryItemProps, 'selected' | 'type'>;
 
 const CATEGORY_OPTIONS: CategoryOptionsType[] = [
   {
