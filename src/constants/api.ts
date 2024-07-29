@@ -3,6 +3,7 @@ import getRandomPostId from '@/utils/getRandomPostId';
 export const POSTS_PATH = 'posts/';
 export const AUTHORS_PATH = 'authors/';
 export const TESTIMONIALS_PATH = 'testimonials/';
+export const TAGS_PATH = 'tags/';
 
 export const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL;
 

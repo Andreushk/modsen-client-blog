@@ -56,3 +56,15 @@
     border-color: $color-yellow;
   }
 }
+
+.small {
+  padding: $s24px;
+  display: flex;
+  align-items: center;
+  gap: $s16px;
+
+  & > h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

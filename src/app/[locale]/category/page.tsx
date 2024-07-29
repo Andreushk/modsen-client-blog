@@ -1,5 +1,10 @@
-import { BlogCategoryHero } from '@/components';
+import { BlogCategoryHero, CategorySection } from '@/components';
 
-const Category: React.FC = () => <BlogCategoryHero />;
+const Category: React.FC = () => (
+  <>
+    <BlogCategoryHero />
+    <CategorySection />
+  </>
+);
 
 export default Category;

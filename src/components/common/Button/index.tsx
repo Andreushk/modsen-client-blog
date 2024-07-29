@@ -2,7 +2,7 @@ import { sen } from '@/styles/fonts';
 
 import styles from './style.module.scss';
 
-type ButtonsAttributesType = React.ButtonHTMLAttributes<HTMLButtonElement>;
+export type ButtonsAttributesType = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 type ButtonStyleTypes = 'white' | 'yellow';
 

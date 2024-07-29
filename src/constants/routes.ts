@@ -13,4 +13,5 @@ export type AppRoutesType = `${AppRoutes}`;
 
 export enum AppRoutesQueryParameters {
   CATEGORY = 'category',
+  TAG = 'tag',
 }

@@ -94,6 +94,11 @@
     }
   },
   "CategoryPage": {
-    "blog-category-hero": "blog >"
+    "blog-category-hero": "blog >",
+    "filters": {
+      "input-placeholder": "Search for tag...",
+      "categories": "Categories",
+      "all-tags": "All Tags"
+    }
   }
 }

@@ -1,0 +1,50 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/fonts.scss';
+
+.filters {
+  width: 298px;
+
+  @media (max-width: $desktopS) {
+    width: 100%;
+  }
+
+  & > div:nth-of-type(2) {
+    & h2 {
+      margin-bottom: $s40px;
+
+      @media (max-width: $desktopS) {
+        margin-bottom: $s8px;
+      }
+    }
+  }
+
+  @media (max-width: $desktopS) {
+    & > div:nth-of-type(2) > div {
+      justify-content: flex-start;
+      gap: $s8px;
+    }
+
+    & > div:nth-of-type(2) > div > div {
+      width: fit-content;
+      padding: $s16px;
+
+      & > div {
+        display: none;
+      }
+
+      & h3 {
+        font-size: $fSize24px;
+        font-weight: $fWeight700;
+        line-height: $lHeight32px;
+      }
+    }
+  }
+
+  @media (max-width: $tabletS) {
+    & > div:nth-of-type(2) > div {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+}

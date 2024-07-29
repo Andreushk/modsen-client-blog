@@ -1,0 +1,8 @@
+@import '@/styles/colors.scss';
+
+.loading_posts {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $color-medium-gray-40;
+}

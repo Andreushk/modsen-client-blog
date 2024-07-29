@@ -1,3 +1,5 @@
+'use client';
+
 import { Paragraph } from '@/components';
 import { AppRoutes, AppRoutesQueryParameters } from '@/constants/routes';
 import { Link } from '@/navigation';
@@ -5,21 +7,52 @@ import { CategoriesType } from '@/types/categories';
 
 import styles from './styles.module.scss';
 
+export type CategoriesSizeTypes = 'small' | 'regular';
+
 export interface CategoryItemProps {
   title: CategoriesType;
   description: string;
   icon: React.ReactNode;
   selected: boolean;
+  type: CategoriesSizeTypes;
+  onClick?: (category: CategoriesType) => void;
 }
 
-const Item: React.FC<CategoryItemProps> = ({ title, description, icon, selected }) => (
-  <Link href={`${AppRoutes.CATEGORY}?${AppRoutesQueryParameters.CATEGORY}=${title}`}>
-    <div className={`${styles.category} ${selected ? styles.selected : ''}`}>
+const Item: React.FC<CategoryItemProps> = ({
+  title,
+  description,
+  icon,
+  selected,
+  type,
+  onClick,
+}) => {
+  const handleCategoryClick = (): void => {
+    if (onClick) {
+      onClick(title);
+    }
+  };
+
+  const category = (
+    <div
+      className={`${styles.category} ${selected ? styles.selected : ''} ${type === 'small' ? styles.small : ''}`}
+      onClick={handleCategoryClick}
+    >
       <div>{icon}</div>
       <h3>{title}</h3>
-      <Paragraph style="dark">{description}</Paragraph>
+      {type !== 'small' && <Paragraph style="dark">{description}</Paragraph>}
     </div>
-  </Link>
-);
+  );
+
+  return (
+    <>
+      {onClick && category}
+      {!onClick && (
+        <Link href={`${AppRoutes.CATEGORY}?${AppRoutesQueryParameters.CATEGORY}=${title}`}>
+          {category}
+        </Link>
+      )}
+    </>
+  );
+};
 
 export default Item;

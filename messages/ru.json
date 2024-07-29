@@ -93,6 +93,11 @@
     }
   },
   "CategoryPage": {
-    "blog-category-hero": "Блог >"
+    "blog-category-hero": "Блог >",
+    "filters": {
+      "input-placeholder": "Искать по тегу...",
+      "categories": "Категории",
+      "all-tags": "Все теги"
+    }
   }
 }
