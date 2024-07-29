@@ -1,6 +1,7 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
+import { useState } from 'react';
 
 import { POSTS_PATH, SERVER_URL } from '@/constants/api';
 import { AppRoutesQueryParameters } from '@/constants/routes';
@@ -14,13 +15,14 @@ import styles from './styles.module.scss';
 
 const CategorySection: React.FC = () => {
   const searchParams = useSearchParams();
-  const category = searchParams.get(AppRoutesQueryParameters.CATEGORY);
-  const tag = searchParams.get(AppRoutesQueryParameters.TAG);
+  const categoryFromURL = searchParams.get(AppRoutesQueryParameters.CATEGORY);
+  const tagFromURL = searchParams.get(AppRoutesQueryParameters.TAG);
 
-  const debouncedTagValue = useDebounce(tag ?? '');
+  const [searchInputValue, setSearchInputValue] = useState<string>(tagFromURL ?? '');
+  const debouncedTagValue = useDebounce(searchInputValue);
 
-  const categoryQueryString = category ? `category=${category}` : null;
-  const tagQueryString = debouncedTagValue.length > 0 ? `tags_like=${debouncedTagValue}` : '';
+  const categoryQueryString = categoryFromURL ? `category=${categoryFromURL}` : null;
+  const tagQueryString = debouncedTagValue.length > 0 ? `tags_like=${debouncedTagValue}` : null;
 
   const { data, isLoading, error } = useQueryDataArray<Post>(
     `${SERVER_URL}${POSTS_PATH}?${categoryQueryString ?? ''}${tagQueryString ? `&${tagQueryString}` : ''}`,
@@ -29,7 +31,7 @@ const CategorySection: React.FC = () => {
   return (
     <section className={styles.category_search}>
       <Posts posts={data} isLoading={isLoading} error={error} />
-      <Filters />
+      <Filters searchInputValue={searchInputValue} onSearchInputChange={setSearchInputValue} />
     </section>
   );
 };

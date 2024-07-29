@@ -12,7 +12,11 @@ import getTagFromParentElement from '@/utils/getTagFromParentElement';
 import LoadingTags from './LoadingTags';
 import styles from './styles.module.scss';
 
-const Tags: React.FC = () => {
+interface ComponentProps {
+  onTagClick: (clickedTag: string) => void;
+}
+
+const Tags: React.FC<ComponentProps> = ({ onTagClick }) => {
   const { data, isLoading, error } = useQueryDataArray<string>(`${SERVER_URL}${TAGS_PATH}`);
 
   const t = useTranslations('CategoryPage');
@@ -28,6 +32,7 @@ const Tags: React.FC = () => {
     if (tag) {
       const params = new URLSearchParams(searchParams);
       params.set(AppRoutesQueryParameters.TAG, tag);
+      onTagClick(tag);
       replace(`${pathname}?${params}`, { scroll: false });
     }
   };

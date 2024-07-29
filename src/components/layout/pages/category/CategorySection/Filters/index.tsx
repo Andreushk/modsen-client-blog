@@ -10,8 +10,14 @@ import SearchInput from './SearchInput';
 import styles from './styles.module.scss';
 import Tags from './Tags';
 
-const Filters: React.FC = () => {
+interface ComponentProps {
+  searchInputValue: string;
+  onSearchInputChange: (newSearchInputValue: string) => void;
+}
+
+const Filters: React.FC<ComponentProps> = ({ searchInputValue, onSearchInputChange }) => {
   const t = useTranslations('CategoryPage');
+
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
@@ -30,7 +36,7 @@ const Filters: React.FC = () => {
 
   return (
     <section className={styles.filters}>
-      <SearchInput />
+      <SearchInput searchInputValue={searchInputValue} onChange={onSearchInputChange} />
       <div>
         <h2>{t('filters.categories')}</h2>
         <Catagories
@@ -39,7 +45,7 @@ const Filters: React.FC = () => {
           onCategoryClick={handleCategoryClick}
         />
       </div>
-      <Tags />
+      <Tags onTagClick={onSearchInputChange} />
     </section>
   );
 };

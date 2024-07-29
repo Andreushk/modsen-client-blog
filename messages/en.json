@@ -97,6 +97,7 @@
     "blog-category-hero": "blog >",
     "filters": {
       "input-placeholder": "Search for tag...",
+      "search-button": "Search",
       "categories": "Categories",
       "all-tags": "All Tags"
     }

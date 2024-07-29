@@ -8,14 +8,17 @@ import { sen } from '@/styles/fonts';
 
 import styles from './styles.module.scss';
 
-const SearchInput: React.FC = () => {
+interface ComponentProps {
+  searchInputValue: string;
+  onChange: (newSearchInputValue: string) => void;
+}
+
+const SearchInput: React.FC<ComponentProps> = ({ searchInputValue, onChange }) => {
   const t = useTranslations('CategoryPage');
   const searchInputRef = useRef<HTMLInputElement>(null);
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
-
-  const inputValue: string | null = searchParams.get(AppRoutesQueryParameters.TAG);
 
   const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { value } = e.target;
@@ -32,6 +35,7 @@ const SearchInput: React.FC = () => {
     }
 
     replace(`${pathname}?${params}`, { scroll: false });
+    onChange(value);
   };
 
   const handleSearchButtonClick = useCallback(() => {
@@ -43,7 +47,7 @@ const SearchInput: React.FC = () => {
   return (
     <div className={styles.filters_search_input}>
       <input
-        value={inputValue ?? ''}
+        value={searchInputValue}
         className={sen.className}
         placeholder={t('filters.input-placeholder')}
         ref={searchInputRef}
@@ -51,7 +55,7 @@ const SearchInput: React.FC = () => {
       />
       <div className={styles.filters_search_input_button}>
         <Button styleType="yellow" onClick={handleSearchButtonClick}>
-          Search
+          {t('filters.search-button')}
         </Button>
       </div>
     </div>
