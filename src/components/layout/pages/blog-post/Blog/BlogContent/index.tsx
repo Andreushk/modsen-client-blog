@@ -28,7 +28,7 @@ const BlogContent: React.FC<ComponentProps> = ({ blog }) => (
     </div>
     <div className={styles.blog_content}>
       {blog.content.map(({ h3, paragraph }) => (
-        <div>
+        <div key={h3}>
           <h3>{h3}</h3>
           <Paragraph style="dark">{paragraph}</Paragraph>
         </div>

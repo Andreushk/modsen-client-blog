@@ -17,7 +17,9 @@ const CredentialsPart: React.FC = () => (
     </div>
     <div>
       {SOCIAL_MEDIA_OPTIONS.map(({ href, iconName }) => (
-        <Link href={href}>{SOCIAL_MEDIA_ICONS[iconName as SocialMediasType]}</Link>
+        <Link key={iconName} href={href}>
+          {SOCIAL_MEDIA_ICONS[iconName as SocialMediasType]}
+        </Link>
       ))}
     </div>
   </div>

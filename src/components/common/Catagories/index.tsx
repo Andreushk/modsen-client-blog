@@ -5,7 +5,7 @@ import CATEGORY_OPTIONS from './options';
 import styles from './styles.module.scss';
 
 interface ComponentProps {
-  selectedCategory: CategoriesType;
+  selectedCategory?: CategoriesType;
 }
 
 const Catagories: React.FC<ComponentProps> = ({ selectedCategory }) => (

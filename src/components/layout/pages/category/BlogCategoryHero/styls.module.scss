@@ -1,0 +1,41 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+@import '@/styles/fonts.scss';
+
+.blog_category_hero {
+  padding: $s80px $s80px;
+  background-color: $color-light-purple;
+
+  @media (max-width: $mobileL) {
+    padding: $s80px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px;
+  }
+
+  &_content {
+    max-width: 515px;
+    margin: 0 auto;
+    text-align: center;
+
+    & > h1 {
+      font-size: $fSize56px;
+      font-weight: $fWeight700;
+      line-height: $lHeight64px;
+      letter-spacing: -2px;
+      text-transform: capitalize;
+
+      @media (max-width: $mobileL) {
+        font-size: $fSize48px;
+        line-height: $lHeight48px;
+      }
+    }
+
+    & > p:first-of-type {
+      margin-top: $s16px;
+      margin-bottom: $s32px;
+    }
+  }
+}

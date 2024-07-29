@@ -10,7 +10,7 @@ const BlogCategories: React.FC = () => {
   return (
     <section className={styles.categories}>
       <h2>{t('all-categories')}</h2>
-      <Catagories selectedCategory="startup" />
+      <Catagories />
     </section>
   );
 };

@@ -91,5 +91,8 @@
     "why-we-started": {
       "title": "Почему мы начали этот Блог"
     }
+  },
+  "CategoryPage": {
+    "blog-category-hero": "Блог >"
   }
 }

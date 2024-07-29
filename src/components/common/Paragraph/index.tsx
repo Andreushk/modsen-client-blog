@@ -4,13 +4,13 @@ import styles from './styles.module.scss';
 
 interface ComponentProps {
   children: React.ReactNode;
-  style: 'light' | 'dark';
+  style: 'light' | 'grayed' | 'dark';
   small?: boolean;
 }
 
 const Paragraph: React.FC<ComponentProps> = ({ children, style, small = false }) => (
   <p
-    className={`${inter.className} ${styles.paragraph} ${style === 'dark' ? styles.dark : styles.light} ${small ? styles.small : ''}`}
+    className={`${inter.className} ${styles.paragraph} ${style === 'dark' ? styles.dark : ''} ${style === 'light' ? styles.light : ''} ${style === 'grayed' ? styles.grayed : ''} ${small ? styles.small : ''}`}
   >
     {children}
   </p>

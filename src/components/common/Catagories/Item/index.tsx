@@ -1,5 +1,5 @@
 import { Paragraph } from '@/components';
-import { AppRoutes } from '@/constants/routes';
+import { AppRoutes, AppRoutesQueryParameters } from '@/constants/routes';
 import { Link } from '@/navigation';
 import { CategoriesType } from '@/types/categories';
 
@@ -13,7 +13,7 @@ export interface CategoryItemProps {
 }
 
 const Item: React.FC<CategoryItemProps> = ({ title, description, icon, selected }) => (
-  <Link href={AppRoutes.CATEGORY}>
+  <Link href={`${AppRoutes.CATEGORY}?${AppRoutesQueryParameters.CATEGORY}=${title}`}>
     <div className={`${styles.category} ${selected ? styles.selected : ''}`}>
       <div>{icon}</div>
       <h3>{title}</h3>
