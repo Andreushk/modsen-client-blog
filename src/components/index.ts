@@ -14,6 +14,7 @@ export { default as HorizontalPostCardWithImage } from './common/PostCards/Horiz
 export { default as VerticalPostCardWithImage } from './common/PostCards/VerticalPostCardWithImage';
 export { default as VerticalPostCardWithoutImage } from './common/PostCards/VerticalPostCardWithoutImage';
 export { default as ReadMoreButtonContainer } from './common/ReadMoreButtonContainer';
+export { default as SocialLinks } from './common/SocialLinks';
 export { default as Spinner } from './common/Spinner';
 export { default as Tag } from './common/Tag';
 export { default as Footer } from './layout/Footer';
@@ -24,6 +25,7 @@ export { default as AboutUsHeader } from './layout/pages/about-us/AboutUsHeader'
 export { default as KnowMoreAboutOurTeam } from './layout/pages/about-us/KnowMoreAboutOurTeam';
 export { default as Overview } from './layout/pages/about-us/Overview';
 export { default as WhyWeStarted } from './layout/pages/about-us/WhyWeStarted';
+export { default as AuthorHeader } from './layout/pages/author/AuthorHeader';
 export { default as AllBlogs } from './layout/pages/blog/AllBlogs';
 export { default as BlogCategories } from './layout/pages/blog/BlogCategories';
 export { default as BlogHeader } from './layout/pages/blog/BlogHeader';

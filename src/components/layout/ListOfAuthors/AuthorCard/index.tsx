@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import React from 'react';
 
-import { Paragraph } from '@/components';
+import { Paragraph, SocialLinks } from '@/components';
 import { AppRoutes } from '@/constants/routes';
-import SOCIAL_MEDIA_ICONS from '@/constants/socialMediaIcons';
-import { Link, useRouter } from '@/navigation';
-import { Author, SocialMediasType } from '@/types/models/authors';
+import { useRouter } from '@/navigation';
+import { Author } from '@/types/models/authors';
 
 import styles from './styles.module.scss';
 
@@ -34,15 +33,7 @@ const AuthorCard: React.FC<ComponentProps> = ({ id, name, profileImageId, social
       <Paragraph style="dark" small>
         Content writer at @Company
       </Paragraph>
-      <div className={styles.social_media_container}>
-        {Object.entries(socialLinks).map(([iconName, linkValue]) => (
-          <Link key={iconName} href={linkValue}>
-            <div className={styles.social_media_item_container}>
-              {SOCIAL_MEDIA_ICONS[iconName as SocialMediasType]}
-            </div>
-          </Link>
-        ))}
-      </div>
+      <SocialLinks socialMediaLinks={socialLinks} />
     </div>
   );
 };

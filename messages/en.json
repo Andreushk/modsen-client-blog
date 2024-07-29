@@ -101,5 +101,10 @@
       "categories": "Categories",
       "all-tags": "All Tags"
     }
+  },
+  "AuthorPage": {
+    "hey-there-first-part": "Hey there, I'm",
+    "hey-there-second-part": "and welcome to my Blog",
+    "my-posts": "My posts"
   }
 }

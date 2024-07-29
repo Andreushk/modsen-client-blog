@@ -39,6 +39,10 @@
   & h3 {
     color: $color-dark-blue;
   }
+
+  & p:last-of-type {
+    margin-bottom: $s20px;
+  }
 }
 
 .author_card_image_circle_container {
@@ -59,23 +63,5 @@
       height: 100%;
       object-fit: cover;
     }
-  }
-}
-
-.social_media_container {
-  display: flex;
-  gap: $s16px;
-  margin-top: $s20px;
-}
-
-.social_media_item_container {
-  transition: $d150ms ease-in-out;
-
-  & svg {
-    fill: $color-dark-blue;
-  }
-
-  &:hover {
-    transform: scale(1.2);
   }
 }

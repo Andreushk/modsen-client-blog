@@ -100,5 +100,10 @@
       "categories": "Категории",
       "all-tags": "Все теги"
     }
+  },
+  "AuthorPage": {
+    "hey-there-first-part": "Привет, я -",
+    "hey-there-second-part": "и добро пожаловать в мой Блог",
+    "my-posts": "Мои посты"
   }
 }
