@@ -1,10 +1,11 @@
-import { ContactInformation, Form, Heading } from '@/components';
+import { ContactInformation, Form, Heading, Map } from '@/components';
 
 const ContactUs: React.FC = () => (
   <>
     <Heading />
     <ContactInformation />
     <Form />
+    <Map />
   </>
 );
 

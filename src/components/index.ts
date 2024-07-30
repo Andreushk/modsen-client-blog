@@ -41,6 +41,7 @@ export { default as CategorySection } from './layout/pages/category/CategorySect
 export { default as ContactInformation } from './layout/pages/contact-us/ContactInformation';
 export { default as Form } from './layout/pages/contact-us/Form';
 export { default as Heading } from './layout/pages/contact-us/Heading';
+export { default as Map } from './layout/pages/contact-us/Map';
 export { default as AboutAndMission } from './layout/pages/home/AboutAndMission';
 export { default as ChooseCategory } from './layout/pages/home/ChooseCategory';
 export { default as FeaturedPost } from './layout/pages/home/FeaturedPost';
