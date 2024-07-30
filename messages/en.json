@@ -106,5 +106,11 @@
     "hey-there-first-part": "Hey there, I'm",
     "hey-there-second-part": "and welcome to my Blog",
     "my-posts": "My posts"
+  },
+  "ContactUsPage": {
+    "heading": {
+      "caption": "Contact us",
+      "title": "Let's Start a Conversation"
+    }
   }
 }

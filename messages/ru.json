@@ -105,5 +105,11 @@
     "hey-there-first-part": "Привет, я -",
     "hey-there-second-part": "и добро пожаловать в мой Блог",
     "my-posts": "Мои посты"
+  },
+  "ContactUsPage": {
+    "heading": {
+      "caption": "Contact us",
+      "title": "Let's Start a Conversation"
+    }
   }
 }
