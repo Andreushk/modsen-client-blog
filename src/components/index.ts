@@ -34,6 +34,7 @@ export { default as Blog } from './layout/pages/blog-post/Blog';
 export { default as OtherPosts } from './layout/pages/blog-post/Blog/OtherPosts';
 export { default as BlogCategoryHero } from './layout/pages/category/BlogCategoryHero';
 export { default as CategorySection } from './layout/pages/category/CategorySection';
+export { default as ContactInformation } from './layout/pages/contact-us/ContactInformation';
 export { default as Heading } from './layout/pages/contact-us/Heading';
 export { default as AboutAndMission } from './layout/pages/home/AboutAndMission';
 export { default as ChooseCategory } from './layout/pages/home/ChooseCategory';

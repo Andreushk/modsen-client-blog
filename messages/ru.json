@@ -108,8 +108,21 @@
   },
   "ContactUsPage": {
     "heading": {
-      "caption": "Contact us",
-      "title": "Let's Start a Conversation"
+      "caption": "Связаться с нами",
+      "title": "Давайте начнем общение"
+    },
+    "contact-us": {
+      "working-hours": {
+        "caption": "Рабочее время",
+        "days": "С ппонедельника по пятницу",
+        "time": "С 9:00 до 20:00",
+        "support": "Наша ьехническая поодержка работает 24/7"
+      },
+      "contact": {
+        "caption": "Contact us",
+        "phone": "020 7993 2905",
+        "email": "hello@finsweet.com"
+      }
     }
   }
 }

@@ -1,5 +1,10 @@
-import { Heading } from '@/components';
+import { ContactInformation, Heading } from '@/components';
 
-const ContactUs: React.FC = () => <Heading />;
+const ContactUs: React.FC = () => (
+  <>
+    <Heading />
+    <ContactInformation />
+  </>
+);
 
 export default ContactUs;

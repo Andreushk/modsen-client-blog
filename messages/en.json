@@ -111,6 +111,19 @@
     "heading": {
       "caption": "Contact us",
       "title": "Let's Start a Conversation"
+    },
+    "contact-us": {
+      "working-hours": {
+        "caption": "Working hours",
+        "days": "Monday to Friday",
+        "time": "9:00 AM to 8:00 PM",
+        "support": "Our Support Team is available 24/7"
+      },
+      "contact": {
+        "caption": "Contact us",
+        "phone": "020 7993 2905",
+        "email": "hello@finsweet.com"
+      }
     }
   }
 }
