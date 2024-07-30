@@ -123,6 +123,13 @@
         "caption": "Contact us",
         "phone": "020 7993 2905",
         "email": "hello@finsweet.com"
+      },
+      "form": {
+        "full-name": "Full Name",
+        "email": "Your Email",
+        "question-category": "Query Related",
+        "message": "Message",
+        "send-button": "Send message"
       }
     }
   }

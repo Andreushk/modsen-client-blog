@@ -114,14 +114,21 @@
     "contact-us": {
       "working-hours": {
         "caption": "Рабочее время",
-        "days": "С ппонедельника по пятницу",
+        "days": "С понедельника по пятницу",
         "time": "С 9:00 до 20:00",
-        "support": "Наша ьехническая поодержка работает 24/7"
+        "support": "Наша техническая поодержка работает 24/7"
       },
       "contact": {
-        "caption": "Contact us",
+        "caption": "Связаться",
         "phone": "020 7993 2905",
         "email": "hello@finsweet.com"
+      },
+      "form": {
+        "full-name": "Полное имя",
+        "email": "Ваш e-mail",
+        "question-category": "Категория сообщения",
+        "message": "Сообщение",
+        "send-button": "Отправить сообщение"
       }
     }
   }

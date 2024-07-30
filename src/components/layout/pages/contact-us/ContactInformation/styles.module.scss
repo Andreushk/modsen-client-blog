@@ -26,10 +26,15 @@
     flex: 1 1 100%;
     color: $color-white;
 
+    & > h5:first-of-type {
+      text-transform: capitalize;
+    }
+
     &_caption {
       font-size: $fSize14px;
       font-weight: $fWeight400;
       line-height: $lHeight20px;
+      text-transform: capitalize;
       opacity: 0.6;
     }
 
