@@ -6,6 +6,7 @@ export { default as FormElementsMessage } from './common/FormElementsMessage';
 export { default as Input } from './common/Input';
 export { default as Label } from './common/Label';
 export { default as LanguageSelect } from './common/LanguageSelect';
+export { default as LoadingShimmer } from './common/LoadingShimmer';
 export { default as Logo } from './common/Logo';
 export { default as Looper } from './common/Looper';
 export { default as ModalWithVideo } from './common/ModalWithVideo';
