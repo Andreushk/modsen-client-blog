@@ -132,5 +132,9 @@
         "send-button": "Send message"
       }
     }
+  },
+  "PrivacyPolicyPage": {
+    "title": "Privacy Policy",
+    "last-updated": "Last Updated on"
   }
 }

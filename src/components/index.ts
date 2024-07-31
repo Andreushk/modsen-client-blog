@@ -49,4 +49,6 @@ export { default as HomeHero } from './layout/pages/home/HomeHero';
 export { default as LogoComponent } from './layout/pages/home/LogoComponent';
 export { default as SpecialPost } from './layout/pages/home/SpecialPost';
 export { default as Testimonials } from './layout/pages/home/Testimonials';
+export { default as BodyContent } from './layout/pages/privacy-policy/BodyContent';
+export { default as PrivacyPolicyHeader } from './layout/pages/privacy-policy/PrivacyPolicyHeader';
 export { default as PortalToBody } from './layout/PortalToBody';
