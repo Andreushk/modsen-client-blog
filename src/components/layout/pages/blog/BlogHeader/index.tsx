@@ -25,7 +25,9 @@ const BlogHeader: React.FC = async () => {
         </Label>
         <Paragraph style="dark">{post.shortDescription}</Paragraph>
         <ReadMoreButtonContainer>
-          <Button styleType="yellow">{t('featured-post.read-more')}</Button>
+          <Link href={`${AppRoutes.BLOG_POST}/${post.id}`}>
+            <Button styleType="yellow">{t('featured-post.read-more')}</Button>
+          </Link>
         </ReadMoreButtonContainer>
       </div>
       <div className={styles.blog_header_image}>

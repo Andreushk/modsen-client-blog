@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 
+import ErrorBoundary from '@/components/layout/ErrorBoundary';
+import SectionError from '@/components/layout/SectionError';
 import { Testimonial } from '@/types/models/testimonials';
 
 import Author from './Author';
@@ -39,23 +41,25 @@ const Slider: React.FC<ComponentProps> = ({ testimonials }) => {
   };
 
   return (
-    <div className={styles.slider}>
-      <div className={`${styles.slide} ${isAnimationGoing ? '' : styles.active}`}>
-        <h4>{testimonials[currentTestimonial].text}</h4>
+    <ErrorBoundary fallback={<SectionError />}>
+      <div className={styles.slider}>
+        <div className={`${styles.slide} ${isAnimationGoing ? '' : styles.active}`}>
+          <h4>{testimonials[currentTestimonial].text}</h4>
+        </div>
+        <div className={styles.author_and_buttons}>
+          <Author
+            name={testimonials[currentTestimonial].author}
+            location={testimonials[currentTestimonial].authorLocation}
+            isAnimationGoing={isAnimationGoing}
+          />
+          <Buttons
+            disabled={isAnimationGoing}
+            onPrev={handlePrevButtonClick}
+            onNext={handleNextButtonClick}
+          />
+        </div>
       </div>
-      <div className={styles.author_and_buttons}>
-        <Author
-          name={testimonials[currentTestimonial].author}
-          location={testimonials[currentTestimonial].authorLocation}
-          isAnimationGoing={isAnimationGoing}
-        />
-        <Buttons
-          disabled={isAnimationGoing}
-          onPrev={handlePrevButtonClick}
-          onNext={handleNextButtonClick}
-        />
-      </div>
-    </div>
+    </ErrorBoundary>
   );
 };
 

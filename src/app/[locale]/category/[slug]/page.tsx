@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-import { BlogCategoryHero, CategorySection } from '@/components';
+import { BlogCategoryHero, CategorySection, ErrorBoundary, SectionError } from '@/components';
 
 export const metadata: Metadata = {
   title: 'Modsen Client Blog | Category',
@@ -20,7 +20,9 @@ interface ComponentProps {
 const Category: React.FC<ComponentProps> = ({ params }) => (
   <>
     <BlogCategoryHero category={params.slug} />
-    <CategorySection />
+    <ErrorBoundary fallback={<SectionError />}>
+      <CategorySection />
+    </ErrorBoundary>
   </>
 );
 

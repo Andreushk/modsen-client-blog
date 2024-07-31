@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-import { ContactInformation, Form, Heading, Map } from '@/components';
+import { ContactInformation, ErrorBoundary, Form, Heading, Map, SectionError } from '@/components';
 
 export const metadata: Metadata = {
   title: 'Modsen Client Blog | Contact Us',
@@ -13,8 +13,12 @@ const ContactUs: React.FC = () => (
   <>
     <Heading />
     <ContactInformation />
-    <Form />
-    <Map />
+    <ErrorBoundary fallback={<SectionError />}>
+      <Form />
+    </ErrorBoundary>
+    <ErrorBoundary fallback={<SectionError />}>
+      <Map />
+    </ErrorBoundary>
   </>
 );
 

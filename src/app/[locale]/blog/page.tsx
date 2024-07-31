@@ -1,6 +1,13 @@
 import { Metadata } from 'next';
 
-import { AllBlogs, BlogCategories, BlogHeader, JoinOurTeam } from '@/components';
+import {
+  AllBlogs,
+  BlogCategories,
+  BlogHeader,
+  ErrorBoundary,
+  JoinOurTeam,
+  SectionError,
+} from '@/components';
 
 export const metadata: Metadata = {
   title: 'Modsen Client Blog | Blog',
@@ -11,7 +18,9 @@ export const metadata: Metadata = {
 const Blog: React.FC = () => (
   <>
     <BlogHeader />
-    <AllBlogs />
+    <ErrorBoundary fallback={<SectionError />}>
+      <AllBlogs />
+    </ErrorBoundary>
     <BlogCategories />
     <JoinOurTeam />
   </>

@@ -1,0 +1,19 @@
+.error_section {
+  width: 100%;
+  padding: 128px 80px;
+
+  & > div {
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+
+    & > h2 {
+      margin-bottom: 24px;
+    }
+
+    & > p:nth-of-type(2) {
+      font-size: 14px;
+      margin-top: 16px;
+    }
+  }
+}
