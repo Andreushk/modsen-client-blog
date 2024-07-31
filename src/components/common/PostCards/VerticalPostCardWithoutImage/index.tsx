@@ -27,10 +27,18 @@ const VerticalPostCardWithoutImage: React.FC<ComponentProps> = ({
     navigation.push(`${AppRoutes.BLOG_POST}/${id}`);
   };
 
+  const handleAuthorLinkClick = (e: React.MouseEvent): void => {
+    e.stopPropagation();
+  };
+
   return (
     <article className={styled.post} onClick={handleClick}>
       <Label>
-        By <Link href={`${AppRoutes.AUTHOR}/${authorId}`}>{author}</Link> l {createdAt}
+        By{' '}
+        <Link href={`${AppRoutes.AUTHOR}/${authorId}`} onClick={handleAuthorLinkClick}>
+          {author}
+        </Link>{' '}
+        l {createdAt}
       </Label>
       <h4>{title}</h4>
     </article>

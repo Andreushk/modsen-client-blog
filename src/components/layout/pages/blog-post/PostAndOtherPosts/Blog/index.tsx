@@ -4,12 +4,12 @@ import BlogContent from './BlogContent';
 import styles from './styles.module.scss';
 
 interface ComponentProps {
-  post: Post;
+  postData: Post;
 }
 
-const Blog: React.FC<ComponentProps> = ({ post }) => (
+const Blog: React.FC<ComponentProps> = async ({ postData }) => (
   <section className={styles.blog}>
-    <BlogContent blog={post} />
+    <BlogContent blog={postData} />
   </section>
 );
 

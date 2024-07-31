@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import { Button, Caption, Paragraph } from '@/components';
+import { AppRoutes } from '@/constants/routes';
+import { Link } from '@/navigation';
 
 import styles from './styles.module.scss';
 
@@ -25,7 +27,9 @@ const SpecialPost: React.FC = () => {
             exercitation ullamco laboris nisi ut aliquip.
           </Paragraph>
           <div>
-            <Button styleType="yellow">{t('why-we-started.discover')}</Button>
+            <Link href={AppRoutes.ABOUT_US}>
+              <Button styleType="yellow">{t('why-we-started.discover')}</Button>
+            </Link>
           </div>
         </div>
       </div>

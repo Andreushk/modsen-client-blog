@@ -11,7 +11,7 @@ import styles from './styles.module.scss';
 const LIMIT = 3;
 
 interface ComponentProps {
-  excludePostId: string;
+  excludePostId: number;
   category: CategoriesType;
 }
 
