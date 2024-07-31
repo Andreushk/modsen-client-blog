@@ -2,12 +2,13 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
 import fetchData from '@/api/fetchData';
-import { Button, Caption, Label, Paragraph, ReadMoreButtonContainer } from '@/components';
+import { Button, Caption, Paragraph, ReadMoreButtonContainer } from '@/components';
 import { HERO_POST_REQUEST_URL } from '@/constants/api';
 import { AppRoutes } from '@/constants/routes';
 import { Link } from '@/navigation';
 import { Post } from '@/types/models/posts';
 
+import AuthorAndPublicationTime from './AuthorAndPublicationTime';
 import styles from './styles.module.scss';
 
 const BlogHeader: React.FC = async () => {
@@ -19,10 +20,11 @@ const BlogHeader: React.FC = async () => {
       <div className={styles.blog_header_information}>
         <Caption style="dark">{t('featured-post.caption')}</Caption>
         <h2>{post.title}</h2>
-        <Label>
-          By <Link href={`${AppRoutes.AUTHOR}/${post.authorId}`}>{post.author}</Link> l{' '}
-          {post.createdAt}{' '}
-        </Label>
+        <AuthorAndPublicationTime
+          authorId={post.authorId}
+          authorName={post.author}
+          publicationTimestamp={post.createdAt}
+        />
         <Paragraph style="dark">{post.shortDescription}</Paragraph>
         <ReadMoreButtonContainer>
           <Link href={`${AppRoutes.BLOG_POST}/${post.id}`}>

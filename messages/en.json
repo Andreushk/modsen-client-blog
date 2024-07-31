@@ -64,7 +64,8 @@
     "all-categories": "All categories"
   },
   "BlogPostPage": {
-    "what-to-read-next": "What to read next"
+    "what-to-read-next": "What to read next",
+    "publication-date": "Posted on"
   },
   "AboutUsPage": {
     "about-us-header": {

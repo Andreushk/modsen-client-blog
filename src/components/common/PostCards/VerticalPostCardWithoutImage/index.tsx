@@ -1,8 +1,12 @@
 'use client';
 
+import { useLocale } from 'next-intl';
+
 import { Label } from '@/components';
 import { AppRoutes } from '@/constants/routes';
 import { Link, useRouter } from '@/navigation';
+import { LocaleTypes } from '@/types/locale';
+import getPublicationDate from '@/utils/getPublicationDate';
 
 import styled from './styles.module.scss';
 
@@ -21,6 +25,7 @@ const VerticalPostCardWithoutImage: React.FC<ComponentProps> = ({
   authorId,
   createdAt,
 }) => {
+  const locale = useLocale() as LocaleTypes;
   const navigation = useRouter();
 
   const handleClick = (): void => {
@@ -38,7 +43,7 @@ const VerticalPostCardWithoutImage: React.FC<ComponentProps> = ({
         <Link href={`${AppRoutes.AUTHOR}/${authorId}`} onClick={handleAuthorLinkClick}>
           {author}
         </Link>{' '}
-        l {createdAt}
+        l {getPublicationDate(createdAt, locale, true)}
       </Label>
       <h4>{title}</h4>
     </article>

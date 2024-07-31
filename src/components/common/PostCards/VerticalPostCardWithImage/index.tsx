@@ -1,12 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { Button, Label, Paragraph, ReadMoreButtonContainer } from '@/components';
 import { AppRoutes } from '@/constants/routes';
 import { Link, useRouter } from '@/navigation';
+import { LocaleTypes } from '@/types/locale';
 import { Post } from '@/types/models/posts';
+import getPublicationDate from '@/utils/getPublicationDate';
 
 import styles from './styles.module.scss';
 
@@ -18,6 +20,7 @@ interface ComponentProps {
 }
 
 const VerticalPostCardWithImage: React.FC<ComponentProps> = ({ post, type = 'regular' }) => {
+  const locale = useLocale() as LocaleTypes;
   const router = useRouter();
   const t = useTranslations('HomePage');
 
@@ -42,7 +45,8 @@ const VerticalPostCardWithImage: React.FC<ComponentProps> = ({ post, type = 'reg
         <Image src="/images/buildings-and-palms.jpg" width={669} height={352} alt="Post image" />
       </div>
       <Label>
-        By <Link href={`${AppRoutes.AUTHOR}/${101}`}>{post.author}</Link> l {post.createdAt}
+        By <Link href={`${AppRoutes.AUTHOR}/${101}`}>{post.author}</Link> l{' '}
+        {getPublicationDate(post.createdAt, locale, true)}
       </Label>
       <h3>{post.title}</h3>
       <Paragraph style="dark">{post.shortDescription}</Paragraph>

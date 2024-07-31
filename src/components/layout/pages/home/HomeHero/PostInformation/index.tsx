@@ -1,12 +1,14 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { Button, Caption, Paragraph, ReadMoreButtonContainer } from '@/components';
 import { AppRoutes } from '@/constants/routes';
 import { Link, useRouter } from '@/navigation';
 import { inter } from '@/styles/fonts';
+import { LocaleTypes } from '@/types/locale';
 import { Post } from '@/types/models/posts';
+import getPublicationDate from '@/utils/getPublicationDate';
 
 import BackgroundImage from './BackgroundImage';
 import styles from './styles.module.scss';
@@ -17,6 +19,7 @@ interface ComponentProps {
 
 const PostInformation: React.FC<ComponentProps> = ({ post }) => {
   const router = useRouter();
+  const locale = useLocale() as LocaleTypes;
   const t = useTranslations('HomePage');
 
   const handleReadMoreButtonClick = (): void => {
@@ -34,7 +37,7 @@ const PostInformation: React.FC<ComponentProps> = ({ post }) => {
           <h2 className={styles.post_title}>{post.title}</h2>
           <span className={` ${inter.className} ${styles.post_credentials}`}>
             By <Link href={`${AppRoutes.AUTHOR}/${post.authorId}`}>{post.author}</Link> l{' '}
-            {post.createdAt}
+            {getPublicationDate(post.createdAt, locale, true)}
           </span>
           <Paragraph style="light">{post.shortDescription}</Paragraph>
           <ReadMoreButtonContainer>

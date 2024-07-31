@@ -63,7 +63,8 @@
     "all-categories": "Все категории"
   },
   "BlogPostPage": {
-    "what-to-read-next": "Читать далее"
+    "what-to-read-next": "Читать далее",
+    "publication-date": "Опубликованно:"
   },
   "AboutUsPage": {
     "about-us-header": {
