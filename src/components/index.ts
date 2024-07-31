@@ -24,6 +24,7 @@ export { default as Textarea } from './common/Textarea';
 export { default as ErrorBoundary } from './layout/ErrorBoundary';
 export { default as Footer } from './layout/Footer';
 export { default as Header } from './layout/Header';
+export { default as InfinityScroll } from './layout/InfinityScroll';
 export { default as JoinOurTeam } from './layout/JoinOurTeam';
 export { default as ListOfAuthors } from './layout/ListOfAuthors';
 export { default as AboutUsHeader } from './layout/pages/about-us/AboutUsHeader';

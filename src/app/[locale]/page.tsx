@@ -5,6 +5,7 @@ import {
   ChooseCategory,
   FeaturedPost,
   HomeHero,
+  InfinityScroll,
   JoinOurTeam,
   ListOfAuthors,
   LogoComponent,
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 const Home: React.FC = () => (
-  <>
+  <InfinityScroll>
     <HomeHero />
     <FeaturedPost />
     <AboutAndMission />
@@ -29,7 +30,7 @@ const Home: React.FC = () => (
     <LogoComponent />
     <Testimonials />
     <JoinOurTeam />
-  </>
+  </InfinityScroll>
 );
 
 export default Home;

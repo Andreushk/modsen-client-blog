@@ -1,0 +1,14 @@
+@import '@/styles/durations.scss';
+@import '@/styles/spacings.scss';
+
+.fade_in {
+  opacity: 0;
+  transform: translateY($s192px);
+  will-change: transform;
+  transition: $s450ms ease-out;
+
+  &.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
