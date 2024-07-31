@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+
 import {
   AboutUsHeader,
   JoinOurTeam,
@@ -6,6 +8,17 @@ import {
   Overview,
   WhyWeStarted,
 } from '@/components';
+
+export const metadata: Metadata = {
+  title: 'Modsen Client Blog | About Us',
+  description: 'Learn our history, how we got started and what our mission is.',
+  keywords: 'blog, authors, privacy policy',
+  openGraph: {
+    title: `Modsen Client Blog | About Us`,
+    description: `Learn our history, how we got started and what our mission is.`,
+    siteName: 'Modsen Client Blog Site',
+  },
+};
 
 const AboutUs: React.FC = () => (
   <>

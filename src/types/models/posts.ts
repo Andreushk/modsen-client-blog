@@ -11,6 +11,7 @@ export interface Post {
   author: string;
   authorId: number;
   createdAt: number;
+  tags: string[];
   shortDescription: string;
   category: CategoriesType;
   content: PostContent[];

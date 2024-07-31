@@ -1,17 +1,7 @@
-import '@/styles/reset.scss';
-import '@/styles/global.scss';
-
-import type { Metadata } from 'next';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 import { Footer, Header } from '@/components';
 import { sen } from '@/styles/fonts';
-
-export const metadata: Metadata = {
-  title: 'Client Blog App',
-  description:
-    'Read interesting articles and updates on our blog. Stay informed with the latest news, tips, and guides on trending topics.',
-};
 
 interface LayoutProps {
   children: React.ReactNode;
