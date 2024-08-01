@@ -4,7 +4,7 @@ import React from 'react';
 
 import { Paragraph, Tag } from '@/components';
 import { TAG_DATA_ATTRIBUTE } from '@/components/common/Tag';
-import { SERVER_URL, TAGS_PATH } from '@/constants/api';
+import { SERVER_URL, ServerPaths } from '@/constants/api';
 import { AppRoutesQueryParameters } from '@/constants/routes';
 import useQueryDataArray from '@/hooks/useQueryDataArray';
 import getTagFromParentElement from '@/utils/getTagFromParentElement';
@@ -17,7 +17,7 @@ interface ComponentProps {
 }
 
 const Tags: React.FC<ComponentProps> = ({ onTagClick }) => {
-  const { data, isLoading, error } = useQueryDataArray<string>(`${SERVER_URL}${TAGS_PATH}`);
+  const { data, isLoading, error } = useQueryDataArray<string>(`${SERVER_URL}${ServerPaths.TAGS}`);
 
   const t = useTranslations('CategoryPage');
   const { replace } = useRouter();

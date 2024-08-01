@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import Caption from '@/components/common/Caption';
 import Paragraph from '@/components/common/Paragraph';
 
-import styles from './styls.module.scss';
+import styles from './styles.module.scss';
 
 interface ComponentProps {
   category: string;

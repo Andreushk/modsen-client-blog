@@ -1,14 +1,14 @@
 import { useTranslations } from 'next-intl';
 
 import fetchDataArray from '@/api/fetchDataArray';
-import { ALL_POSTS_REQUEST_URL } from '@/constants/api';
+import { SERVER_URL, ServerPaths } from '@/constants/api';
 import { CategoriesType } from '@/types/categories';
 import { Post } from '@/types/models/posts';
 
 import Posts from './Posts';
 import styles from './styles.module.scss';
 
-const LIMIT = 3;
+const POSTS_LIMIT = 3;
 
 interface ComponentProps {
   excludePostId: number;
@@ -19,7 +19,7 @@ const OtherPosts: React.FC<ComponentProps> = async ({ excludePostId, category })
   const t = useTranslations('BlogPostPage');
 
   const suggestedPosts = await fetchDataArray<Post[]>(
-    `${ALL_POSTS_REQUEST_URL}?_limit=${LIMIT}&id_ne=${excludePostId}&category=${category}`,
+    `${SERVER_URL}${ServerPaths.POSTS}?_limit=${POSTS_LIMIT}&id_ne=${excludePostId}&category=${category}`,
   );
 
   return (

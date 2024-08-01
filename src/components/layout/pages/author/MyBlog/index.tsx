@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 
 import fetchDataArray from '@/api/fetchDataArray';
 import { HorizontalPostCardWithImage } from '@/components';
-import { POSTS_PATH, SERVER_URL } from '@/constants/api';
+import { SERVER_URL, ServerPaths } from '@/constants/api';
 import { Post } from '@/types/models/posts';
 
 import styles from './styles.module.scss';
@@ -14,7 +14,7 @@ interface ComponentProps {
 const MyBlog: React.FC<ComponentProps> = async ({ postsAuthorId }) => {
   const t = await getTranslations('AuthorPage');
   const posts = await fetchDataArray<Post[]>(
-    `${SERVER_URL}${POSTS_PATH}?authorId=${postsAuthorId}`,
+    `${SERVER_URL}${ServerPaths.POSTS}?authorId=${postsAuthorId}`,
   );
 
   return (

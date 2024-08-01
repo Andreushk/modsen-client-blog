@@ -1,5 +1,5 @@
 import fetchData from '@/api/fetchData';
-import { POSTS_PATH, SERVER_URL } from '@/constants/api';
+import { SERVER_URL, ServerPaths } from '@/constants/api';
 import { Post } from '@/types/models/posts';
 
 import Blog from './Blog';
@@ -10,7 +10,7 @@ interface ComponentProps {
 }
 
 const PostAndOtherPosts: React.FC<ComponentProps> = async ({ postId }) => {
-  const post = await fetchData<Post>(`${SERVER_URL}${POSTS_PATH}?id=${postId}`);
+  const post = await fetchData<Post>(`${SERVER_URL}${ServerPaths.POSTS}?id=${postId}`);
 
   return (
     <>

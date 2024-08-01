@@ -3,7 +3,7 @@
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 
-import { POSTS_PATH, SERVER_URL } from '@/constants/api';
+import { SERVER_URL, ServerPaths } from '@/constants/api';
 import { AppRoutesQueryParameters } from '@/constants/routes';
 import useDebounce from '@/hooks/useDebounce';
 import useQueryDataArray from '@/hooks/useQueryDataArray';
@@ -27,7 +27,7 @@ const CategorySection: React.FC = () => {
   const tagQueryString = debouncedTagValue.length > 0 ? `tags_like=${debouncedTagValue}` : null;
 
   const { data, isLoading, error } = useQueryDataArray<Post>(
-    `${SERVER_URL}${POSTS_PATH}?${categoryQueryString ?? ''}${tagQueryString ? `&${tagQueryString}` : ''}`,
+    `${SERVER_URL}${ServerPaths.POSTS}?${categoryQueryString ?? ''}${tagQueryString ? `&${tagQueryString}` : ''}`,
   );
 
   return (

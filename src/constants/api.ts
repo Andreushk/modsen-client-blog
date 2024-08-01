@@ -1,21 +1,11 @@
-import getRandomPostId from '@/utils/getRandomPostId';
+export enum ServerPaths {
+  POSTS = 'posts/',
+  AUTHORS = 'authors/',
+  TESTIMONIALS = 'testimonials/',
+  TAGS = 'tags/',
+}
 
-export const POSTS_PATH = 'posts/';
-export const AUTHORS_PATH = 'authors/';
-export const TESTIMONIALS_PATH = 'testimonials/';
-export const TAGS_PATH = 'tags/';
+export const SERVER_URL: string | undefined = process.env.NEXT_PUBLIC_SERVER_URL;
 
-export const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL;
-
-const FEATURED_POST_ID = 20;
-export const FEATURED_POST_REQUEST_URL = `${SERVER_URL}${POSTS_PATH}?id=${FEATURED_POST_ID}`;
-
-const ALL_POSTS_LIMIT = 4;
-export const ALL_POSTS_REQUEST_URL = `${SERVER_URL}${POSTS_PATH}`;
-export const ALL_POSTS_REQUEST_URL_WITH_LIMIT = `${SERVER_URL}${POSTS_PATH}?_limit=${ALL_POSTS_LIMIT}`;
-
-const HERO_POST_ID = getRandomPostId();
-export const HERO_POST_REQUEST_URL = `${SERVER_URL}${POSTS_PATH}?id=${HERO_POST_ID}`;
-
-export const AUTHORS_REQUEST_URL = `${SERVER_URL}${AUTHORS_PATH}`;
-export const TESTIMONIALS_REQUEST_URL = `${SERVER_URL}${TESTIMONIALS_PATH}`;
+export const MIN_POST_ID = 1;
+export const MAX_POST_ID = 20;

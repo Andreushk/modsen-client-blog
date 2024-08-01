@@ -2,12 +2,12 @@ import { Metadata } from 'next';
 
 import fetchData from '@/api/fetchData';
 import { JoinOurTeam, PostAndOtherPosts } from '@/components';
-import { POSTS_PATH, SERVER_URL } from '@/constants/api';
+import { SERVER_URL, ServerPaths } from '@/constants/api';
 import { Post } from '@/types/models/posts';
 
 export async function generateMetadata(pageParams: ComponentProps): Promise<Metadata> {
   const { id } = pageParams.params;
-  const post = await fetchData<Post>(`${SERVER_URL}${POSTS_PATH}?id=${id}`);
+  const post = await fetchData<Post>(`${SERVER_URL}${ServerPaths.POSTS}?id=${id}`);
 
   return {
     title: post.title,

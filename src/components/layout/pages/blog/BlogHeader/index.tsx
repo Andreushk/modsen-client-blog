@@ -3,17 +3,20 @@ import { getTranslations } from 'next-intl/server';
 
 import fetchData from '@/api/fetchData';
 import { Button, Caption, Paragraph, ReadMoreButtonContainer } from '@/components';
-import { HERO_POST_REQUEST_URL } from '@/constants/api';
+import { MAX_POST_ID, MIN_POST_ID, SERVER_URL, ServerPaths } from '@/constants/api';
 import { AppRoutes } from '@/constants/routes';
 import { Link } from '@/navigation';
 import { Post } from '@/types/models/posts';
+import getRandomNumber from '@/utils/getRandomNumber';
 
 import AuthorAndPublicationTime from './AuthorAndPublicationTime';
 import styles from './styles.module.scss';
 
+const RANDOM_POST_ID = getRandomNumber(MIN_POST_ID, MAX_POST_ID);
+
 const BlogHeader: React.FC = async () => {
   const t = await getTranslations('BlogPage');
-  const post = await fetchData<Post>(HERO_POST_REQUEST_URL);
+  const post = await fetchData<Post>(`${SERVER_URL}${ServerPaths.POSTS}?id=${RANDOM_POST_ID}`);
 
   return (
     <section className={styles.blog_header}>

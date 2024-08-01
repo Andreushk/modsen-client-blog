@@ -1,5 +1,5 @@
 import fetchData from '@/api/fetchData';
-import { AUTHORS_PATH, SERVER_URL } from '@/constants/api';
+import { SERVER_URL, ServerPaths } from '@/constants/api';
 import { Author } from '@/types/models/authors';
 
 import Credentials from './Credentials';
@@ -10,7 +10,7 @@ interface ComponentProps {
 }
 
 const AuthorHeader: React.FC<ComponentProps> = async ({ id }) => {
-  const authorData = await fetchData<Author>(`${SERVER_URL}${AUTHORS_PATH}?id=${id}`);
+  const authorData = await fetchData<Author>(`${SERVER_URL}${ServerPaths.AUTHORS}?id=${id}`);
 
   return (
     <section className={styles.author_header}>

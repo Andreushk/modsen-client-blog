@@ -4,21 +4,21 @@ import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 import { HorizontalPostCardWithImage, Paragraph, Spinner } from '@/components';
-import { ALL_POSTS_REQUEST_URL } from '@/constants/api';
+import { SERVER_URL, ServerPaths } from '@/constants/api';
 import useQueryDataArrayWithPagination from '@/hooks/useQueryDataArrayWithPagination';
 import { Post } from '@/types/models/posts';
 
 import Buttons from './Buttons';
 import styles from './style.module.scss';
 
-const LIMIT = 5;
+const LIMIT_OF_POSTS = 5;
 
 const AllBlogs: React.FC = () => {
   const [page, setPage] = useState<number>(1);
 
   const t = useTranslations('BlogPage');
   const { data, totalPages, error } = useQueryDataArrayWithPagination<Post>(
-    `${ALL_POSTS_REQUEST_URL}?_page=${page}&_limit=${LIMIT}`,
+    `${SERVER_URL}${ServerPaths.POSTS}?_page=${page}&_limit=${LIMIT_OF_POSTS}`,
   );
 
   const handlePrevButtonClick = (): void => {

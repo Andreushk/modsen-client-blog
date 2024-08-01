@@ -1,15 +1,22 @@
 import fetchData from '@/api/fetchData';
 import fetchDataArray from '@/api/fetchDataArray';
-import { ALL_POSTS_REQUEST_URL_WITH_LIMIT, FEATURED_POST_REQUEST_URL } from '@/constants/api';
+import { SERVER_URL, ServerPaths } from '@/constants/api';
 import { Post } from '@/types/models/posts';
 
 import AllPostsPart from './AllPostsPart';
 import FeaturedPart from './FeaturedPart';
 import styles from './styles.module.scss';
 
+const POSTS_LIMIT = 4;
+const FEATURED_POST_ID = 20;
+
 const FeaturedPost: React.FC = async () => {
-  const allPosts = await fetchDataArray<Post[]>(ALL_POSTS_REQUEST_URL_WITH_LIMIT);
-  const featuredPost = await fetchData<Post>(FEATURED_POST_REQUEST_URL);
+  const allPosts = await fetchDataArray<Post[]>(
+    `${SERVER_URL}${ServerPaths.POSTS}?_limit=${POSTS_LIMIT}`,
+  );
+  const featuredPost = await fetchData<Post>(
+    `${SERVER_URL}${ServerPaths.POSTS}?id=${FEATURED_POST_ID}`,
+  );
 
   return (
     <section className={styles.featured_and_all_posts}>
