@@ -8,7 +8,7 @@ const getPublicationDate = (
   isWithDayEnding?: boolean,
   isDayFirst?: boolean,
 ): string => {
-  const date: Date = new Date(timestamp);
+  const date: Date = new Date(timestamp * 1000);
 
   const day = date.getDate();
   const month = locale === 'en' ? MONTH_EN[date.getMonth()] : MONTH_RU[date.getMonth()];
