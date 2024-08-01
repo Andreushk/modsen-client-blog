@@ -1,0 +1,39 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/durations.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.close_button {
+  position: absolute;
+  top: $s24px;
+  right: calc(50% + $s24px);
+  transform: translateY(-80px);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  will-change: transform;
+  transition: $d250ms ease-in-out;
+
+  @media (max-width: $tabletS) {
+    right: calc(400px + $s24px);
+  }
+
+  @media (max-width: $mobileL) {
+    right: calc(70% + $s24px);
+  }
+
+  &.visible {
+    transform: translateY(0);
+  }
+
+  & button {
+    color: $color-white;
+    background-color: $color-dark-blue;
+    border: none;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+}

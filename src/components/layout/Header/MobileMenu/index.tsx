@@ -2,8 +2,11 @@ import React, { useCallback, useEffect, useState } from 'react';
 
 import { Overlay, PortalToBody } from '@/components';
 
+import CloseButton from './CloseButton';
 import Menu from './Menu';
 import styles from './styles.module.scss';
+
+const ANIMATION_DURATIONS = 150;
 
 interface ComponentProps {
   onClose: () => void;
@@ -28,18 +31,19 @@ const MobileMenu: React.FC<ComponentProps> = ({ onClose }) => {
     const timerId: NodeJS.Timeout = setTimeout(() => {
       onClose();
       clearTimeout(timerId);
-    }, 250);
+    }, ANIMATION_DURATIONS);
   }, [onClose]);
 
   return (
     <PortalToBody>
       <Overlay isGoingToClose={isGoingToClose} onClick={handleClose}>
         <div
-          className={`${styles.mobile_menu} ${isVisible ? styles.active : null}`}
+          className={`${styles.mobile_menu} ${isVisible && !isGoingToClose ? styles.active : ''}`}
           onClick={handleMobileMenuClick}
         >
           <Menu onClose={handleClose} />
         </div>
+        <CloseButton isGoingToClose={isGoingToClose} />
       </Overlay>
     </PortalToBody>
   );
