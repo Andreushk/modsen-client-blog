@@ -17,7 +17,7 @@ const VideoButton: React.FC = () => {
 
   return (
     <>
-      <div className={styles.header_video}>
+      <div className={styles.header_video} data-testid="video-button">
         <Button styleType="white" onClick={handleVideoButtonClick}>
           {t('video-button')}
         </Button>

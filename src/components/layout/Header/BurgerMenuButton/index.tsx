@@ -7,7 +7,12 @@ interface ComponentProps {
 }
 
 const BurgerMenuButton: React.FC<ComponentProps> = ({ onClick }) => (
-  <button type="button" className={styles.burger_button} onClick={onClick}>
+  <button
+    type="button"
+    className={styles.burger_button}
+    data-testid="burger-menu-button"
+    onClick={onClick}
+  >
     <span />
     <span />
     <span />

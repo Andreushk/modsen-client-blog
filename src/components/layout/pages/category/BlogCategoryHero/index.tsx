@@ -13,7 +13,7 @@ const BlogCategoryHero: React.FC<ComponentProps> = ({ category }) => {
   const t = useTranslations('CategoryPage');
 
   return (
-    <section className={styles.blog_category_hero}>
+    <section className={styles.blog_category_hero} data-testid="blog-category-hero">
       <div className={styles.blog_category_hero_content}>
         <h1>{category}</h1>
         <Paragraph style="grayed">

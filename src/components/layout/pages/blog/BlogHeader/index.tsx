@@ -19,7 +19,7 @@ const BlogHeader: React.FC = async () => {
   const post = await fetchData<Post>(`${SERVER_URL}${ServerPaths.POSTS}?id=${RANDOM_POST_ID}`);
 
   return (
-    <section className={styles.blog_header}>
+    <section className={styles.blog_header} data-testid="featured-post">
       <div className={styles.blog_header_information}>
         <Caption style="dark">{t('featured-post.caption')}</Caption>
         <h2>{post.title}</h2>

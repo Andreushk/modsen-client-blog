@@ -61,7 +61,7 @@ const Textarea: React.FC<ComponentProps> = ({
         ref={refCallback}
         {...rest}
         placeholder={placeholder}
-        className={`${inter.className} ${styles.wrapper_textarea}`}
+        className={`${inter.className} ${styles.wrapper_textarea} ${error ? styles.error : ''}`}
       />
       {error && <FormElementsMessage>{error}</FormElementsMessage>}
     </div>

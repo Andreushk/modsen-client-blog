@@ -29,7 +29,7 @@ const ModalWithVideo: React.FC = () => {
   };
 
   return (
-    <div className={styles.video} onClick={handleClick}>
+    <div className={styles.video} onClick={handleClick} data-testid="video-container">
       <video ref={videoRef} autoPlay>
         {NOT_SUPPORTED_MESSAGE}
         <track kind="captions" />

@@ -16,7 +16,10 @@ const CloseButton: React.FC<ComponentProps> = ({ isGoingToClose }) => {
   }, []);
 
   return (
-    <div className={`${styles.close_button} ${isVisible && !isGoingToClose ? styles.visible : ''}`}>
+    <div
+      className={`${styles.close_button} ${isVisible && !isGoingToClose ? styles.visible : ''}`}
+      data-testid="mobile-menu-close-button"
+    >
       <Button styleType="yellow">X</Button>
     </div>
   );

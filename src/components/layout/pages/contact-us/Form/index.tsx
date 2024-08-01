@@ -78,7 +78,7 @@ const Form: React.FC = () => {
       : [t('contact-us.form.question-category'), ...SELECT_CATEGORIES_RU];
 
   return (
-    <section className={styles.form_section}>
+    <section className={styles.form_section} data-testid="contact-form">
       <form className={styles.form_section_content} onSubmit={handleSubmit(handleFormSubmit)}>
         {FORM_INPUTS_OPTIONS.map(({ name, placeholderTranslationsPath }) => (
           <Input

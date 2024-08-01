@@ -24,7 +24,7 @@ const Header: React.FC = () => {
         <Logo />
         {isWideScreen && !isMobileMenuOpen && (
           <>
-            <div className={styles.header_nav}>
+            <div className={styles.header_nav} data-testid="header-navigation">
               <Navigation />
             </div>
             <VideoButton />

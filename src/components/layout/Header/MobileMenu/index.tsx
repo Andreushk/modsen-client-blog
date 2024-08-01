@@ -39,6 +39,7 @@ const MobileMenu: React.FC<ComponentProps> = ({ onClose }) => {
       <Overlay isGoingToClose={isGoingToClose} onClick={handleClose}>
         <div
           className={`${styles.mobile_menu} ${isVisible && !isGoingToClose ? styles.active : ''}`}
+          data-testid="mobile-menu"
           onClick={handleMobileMenuClick}
         >
           <Menu onClose={handleClose} />

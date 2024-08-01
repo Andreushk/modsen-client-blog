@@ -28,6 +28,7 @@ const FormStatusMessageContainer: React.FC<ComponentProps> = ({ isSuccess }) => 
 
   return (
     <div
+      data-testid="form-message"
       className={`${styles.form_message_container} ${isSuccess ? styles.success : styles.error} ${isVisible ? styles.visible : ''}`}
     >
       <Paragraph style="dark">{isSuccess ? SUCCESS_MESSAGE : ERROR_MESSAGE}</Paragraph>

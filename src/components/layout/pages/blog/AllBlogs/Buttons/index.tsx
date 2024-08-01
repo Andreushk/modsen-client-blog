@@ -15,7 +15,7 @@ const Buttons: React.FC<ComponentProps> = ({ prevDisabled, nextDisabled, onPrev,
   const t = useTranslations('BlogPage');
 
   return (
-    <div className={styles.buttons}>
+    <div className={styles.buttons} data-testid="pagination-buttons">
       <button type="button" disabled={prevDisabled} className={`${sen.className}`} onClick={onPrev}>
         {t('all-posts.prev')}
       </button>

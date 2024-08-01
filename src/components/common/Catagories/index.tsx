@@ -15,7 +15,10 @@ const Catagories: React.FC<ComponentProps> = ({
   selectedCategory,
   onCategoryClick,
 }) => (
-  <div className={`${styles.categories} ${type === 'small' ? styles.small : ''}`}>
+  <div
+    className={`${styles.categories} ${type === 'small' ? styles.small : ''}`}
+    data-testid="categories"
+  >
     {CATEGORY_OPTIONS.map(({ title, description, icon }) => (
       <Item
         key={title}

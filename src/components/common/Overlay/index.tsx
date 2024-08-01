@@ -20,6 +20,7 @@ const Overlay: React.FC<ComponentProps> = ({ children, onClick, isGoingToClose =
   return (
     <div
       className={`${styles.overlay} ${isVisible && !isGoingToClose ? styles.visible : null}`}
+      data-testid="overlay"
       onClick={onClick}
     >
       {children}

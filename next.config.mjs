@@ -26,6 +26,10 @@ const nextConfig = {
 
     return config;
   },
+  compiler: {
+    reactRemoveProperties:
+      process.env.NODE_ENV === 'production' ? { properties: ['data-testid'] } : undefined,
+  },
   sassOptions: {
     includePaths: [path.join(process.cwd(), 'styles')],
   },

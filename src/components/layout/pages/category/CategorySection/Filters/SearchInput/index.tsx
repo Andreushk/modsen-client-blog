@@ -51,6 +51,7 @@ const SearchInput: React.FC<ComponentProps> = ({ searchInputValue, onChange }) =
         className={sen.className}
         placeholder={t('filters.input-placeholder')}
         ref={searchInputRef}
+        data-testid="search-input"
         onChange={handleSearchInputChange}
       />
       <div className={styles.filters_search_input_button}>

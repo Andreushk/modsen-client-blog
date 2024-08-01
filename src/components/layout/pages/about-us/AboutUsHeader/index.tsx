@@ -9,7 +9,7 @@ const AboutUsHeader: React.FC = () => {
   const t = useTranslations('AboutUsPage');
 
   return (
-    <section className={styles.about_us_header}>
+    <section className={styles.about_us_header} data-testid="about-us-header">
       <div className={styles.about_us_header_title}>
         <Caption style="dark">{t('about-us-header.caption')}</Caption>
         <h1>{t('about-us-header.title')}</h1>

@@ -27,7 +27,12 @@ const LanguageSelect: React.FC = () => {
 
   return (
     <div className={styles.select}>
-      <select className={sen.className} defaultValue={localActive} onChange={handleSelectChange}>
+      <select
+        className={sen.className}
+        defaultValue={localActive}
+        data-testid="language-select"
+        onChange={handleSelectChange}
+      >
         <option value="en">English</option>
         <option value="ru">Russian</option>
       </select>

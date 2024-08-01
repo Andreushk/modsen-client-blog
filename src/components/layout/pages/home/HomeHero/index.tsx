@@ -12,7 +12,7 @@ const HomeHero: React.FC = async () => {
   const post = await fetchData<Post>(`${SERVER_URL}${ServerPaths.POSTS}?id=${RANDOM_POST_ID}`);
 
   return (
-    <section className={styles.home_hero}>
+    <section className={styles.home_hero} data-testid="home-hero">
       <PostInformation post={post} />
     </section>
   );

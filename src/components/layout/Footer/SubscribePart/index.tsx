@@ -61,7 +61,7 @@ const SubscribePart: React.FC = () => {
   const isFormValidationError = !formState.isValid && formState.isSubmitted;
 
   return (
-    <div className={styles.footer_subscribe}>
+    <div className={styles.footer_subscribe} data-testid="subscribe-form">
       <h2>{t('title')}</h2>
       <div className={styles.footer_subscribe_form}>
         <form onSubmit={handleSubmit(handleFormSubmit)}>

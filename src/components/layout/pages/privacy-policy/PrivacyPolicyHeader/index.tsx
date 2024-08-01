@@ -11,7 +11,7 @@ const PrivacyPolicyHeader: React.FC = () => {
   const t = useTranslations('PrivacyPolicyPage');
 
   return (
-    <section className={styles.privacy_policy_header}>
+    <section className={styles.privacy_policy_header} data-testid="privacy-policy-header">
       <h1>{t('title')}</h1>
       <Paragraph style="dark">{`${t('last-updated')} ${getPublicationDate(new Date().getTime(), locale, false, true, true)}`}</Paragraph>
     </section>
