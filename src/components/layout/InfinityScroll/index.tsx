@@ -21,7 +21,7 @@ const InfinityScroll: React.FC<ComponentProps> = ({ children }) => {
           }
         });
       },
-      { threshold: 0.15 },
+      { threshold: 0.1 },
     );
 
     if (elementsRefs.current) {
