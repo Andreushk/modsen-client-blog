@@ -10,7 +10,8 @@
     "airbnb/hooks",
     "airbnb-typescript",
     "airbnb-typescript/base",
-    "prettier"
+    "prettier",
+    "plugin:storybook/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -26,6 +27,12 @@
     "prettier/prettier": "error",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.stories.tsx"]
+      }
+    ],
     "react/function-component-definition": [
       2,
       {

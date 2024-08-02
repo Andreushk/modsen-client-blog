@@ -15,7 +15,7 @@ const Looper: React.FC<IComponentProps> = ({ speed, direction, children }) => {
   const outerRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
 
-  function resetAnimation() {
+  const resetAnimation = () => {
     if (innerRef?.current) {
       innerRef.current.setAttribute('data-animate', 'false');
 
@@ -25,7 +25,7 @@ const Looper: React.FC<IComponentProps> = ({ speed, direction, children }) => {
         }
       }, 10);
     }
-  }
+  };
 
   const setupInstances = useCallback(() => {
     if (!innerRef?.current || !outerRef?.current) return;

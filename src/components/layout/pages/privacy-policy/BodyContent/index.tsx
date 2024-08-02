@@ -1,4 +1,4 @@
-import Paragraph from '@/components/common/Paragraph';
+import Paragraph from '@/components/ui/Paragraph';
 
 import styles from './styles.module.scss';
 

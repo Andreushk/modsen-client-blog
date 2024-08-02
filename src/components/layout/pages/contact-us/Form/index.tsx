@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { Input, Select, Textarea } from '@/components';
-import Button from '@/components/common/Button';
+import Button from '@/components/ui/Button';
 import { ContactForm } from '@/types/forms/contact';
 import { LocaleTypes } from '@/types/locale';
 import contactSchema from '@/utils/schemas/contact';

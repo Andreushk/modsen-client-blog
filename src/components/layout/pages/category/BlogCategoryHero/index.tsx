@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 
-import Caption from '@/components/common/Caption';
-import Paragraph from '@/components/common/Paragraph';
+import Caption from '@/components/ui/Caption';
+import Paragraph from '@/components/ui/Paragraph';
 
 import styles from './styles.module.scss';
 

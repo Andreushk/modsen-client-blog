@@ -2,7 +2,7 @@ import React from 'react';
 
 import { sen } from '@/styles/fonts';
 
-import { ButtonsAttributesType } from '../Button';
+import { ButtonsAttributesType } from '../../ui/Button';
 import styles from './styles.module.scss';
 
 export const TAG_DATA_ATTRIBUTE = 'data-tag-value';

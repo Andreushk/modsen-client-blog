@@ -5,7 +5,7 @@ import { UseFormRegister, UseFormWatch } from 'react-hook-form';
 
 import { inter } from '@/styles/fonts';
 
-import FormElementsMessage from '../FormElementsMessage';
+import FormElementsMessage from '../../ui/FormElementsMessage';
 import styles from './styles.module.scss';
 
 const LINE_HEIGHT = '28px';

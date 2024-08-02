@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 
-import Paragraph from '@/components/common/Paragraph';
+import Paragraph from '@/components/ui/Paragraph';
 import { inter } from '@/styles/fonts';
 
 import styles from './styles.module.scss';
