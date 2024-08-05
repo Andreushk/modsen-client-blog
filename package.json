@@ -1,7 +1,11 @@
 {
   "name": "modsen-client-blog",
+  "description": "An application where users can view interesting posts from different categories.",
+  "repository": "https://github.com/Andreushk/modsen-client-blog.git",
+  "author": "Andreushk <andrewshkt@gmail.com>",
   "version": "0.0.1",
   "private": true,
+  "license": "ISC",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
