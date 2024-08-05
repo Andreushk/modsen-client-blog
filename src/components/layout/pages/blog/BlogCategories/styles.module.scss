@@ -1,0 +1,23 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.categories {
+  padding: $s64px $s80px $s128px $s80px;
+
+  @media (max-width: $mobileL) {
+    padding: $s64px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px;
+  }
+
+  & > h2 {
+    text-transform: capitalize;
+    margin-bottom: $s48px;
+
+    @media (max-width: $tabletM) {
+      margin-bottom: $s32px;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+@import '@/styles/fonts.scss';
+
+.filters_search_input {
+  position: relative;
+  margin-bottom: $s56px;
+  height: 54px;
+
+  @media (max-width: $desktopS) {
+    margin-bottom: $s32px;
+  }
+
+  & > input {
+    width: 100%;
+    height: 100%;
+    padding-left: $s24px;
+    padding-right: $s108px;
+    border: 1px solid $color-medium-light-gray;
+    border-radius: 6px;
+    outline: none;
+
+    font-size: $fSize14px;
+    font-weight: $fWeight700;
+    line-height: $lHeight24px;
+    letter-spacing: -0.015em;
+    color: $color-dark-blue;
+
+    &::placeholder {
+      font-size: $fSize14px;
+      font-weight: $fWeight700;
+      line-height: $lHeight24px;
+      letter-spacing: -0.015em;
+      color: $color-dark-blue;
+    }
+  }
+
+  &_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 84px;
+    height: 100%;
+    border-radius: 6px;
+
+    & > button {
+      border-radius: 6px;
+    }
+  }
+}

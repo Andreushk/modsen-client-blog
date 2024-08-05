@@ -1,0 +1,57 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.post_regular {
+  padding: $s32px;
+  border: 1px solid $color-medium-gray-10;
+
+  @media (max-width: $mobileL) {
+    padding: $s24px;
+  }
+
+  & > h3 {
+    margin-top: $s16px;
+    margin-bottom: $s16px;
+
+    @media (max-width: $mobileL) {
+      margin-top: $s8px;
+      margin-bottom: $s8px;
+    }
+  }
+}
+
+.post_small {
+  cursor: pointer;
+
+  & > h3 {
+    margin-top: $s16px;
+    margin-bottom: $s16px;
+
+    @media (max-width: $laptopS) {
+      margin-top: $s8px;
+      margin-bottom: $s8px;
+    }
+  }
+}
+
+.post_image {
+  width: 100%;
+  height: 352px;
+  margin-bottom: $s32px;
+
+  &.small {
+    height: 318px;
+
+    @media (max-width: $laptopS) {
+      margin-bottom: $s16px;
+    }
+  }
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

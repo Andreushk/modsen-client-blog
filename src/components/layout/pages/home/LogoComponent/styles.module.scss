@@ -1,0 +1,32 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.logos_container {
+  display: flex;
+  align-items: center;
+  gap: $s80px;
+
+  & > div:last-of-type {
+    margin-right: $s80px;
+  }
+}
+
+@media all and (max-width: 900px) {
+  .logos_container {
+    gap: $s56px;
+
+    & > div:last-of-type {
+      margin-right: $s56px;
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  .logos_container {
+    gap: $s24px;
+
+    & > div:last-of-type {
+      margin-right: $s24px;
+    }
+  }
+}

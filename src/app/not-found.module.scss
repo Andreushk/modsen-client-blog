@@ -1,0 +1,32 @@
+@import '@/styles/spacings.scss';
+@import '@/styles/fonts.scss';
+
+.not_found {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  text-align: center;
+  max-width: 320px;
+
+  & > h1 {
+    font-size: $fSize130px;
+    line-height: $lHeight130px;
+  }
+
+  & > h2 {
+    text-transform: capitalize;
+  }
+
+  & > p {
+    margin-top: $s16px;
+  }
+
+  & > div:last-of-type {
+    max-width: 70%;
+    height: 56px;
+    margin: 0 auto;
+    margin-top: $s32px;
+  }
+}

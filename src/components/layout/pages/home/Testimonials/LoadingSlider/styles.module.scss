@@ -1,0 +1,11 @@
+@import '@/styles/breakpoints.scss';
+
+.loading_slider {
+  position: relative;
+  flex: 1 1 41.88%;
+  margin-left: 8.53%;
+
+  @media (max-width: $laptopS) {
+    min-height: 200px;
+  }
+}

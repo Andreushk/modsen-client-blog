@@ -1,0 +1,8 @@
+@import '@/styles/colors.scss';
+
+.loading_container {
+  position: relative;
+  width: 100%;
+  min-height: 738px;
+  border: 1px solid $color-medium-gray-10;
+}

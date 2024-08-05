@@ -1,0 +1,21 @@
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.burger_button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 36px;
+  padding: $s4px;
+  gap: $s4px;
+  margin-left: auto;
+  background-color: inherit;
+  border: none;
+  outline: none;
+
+  span {
+    width: 100%;
+    height: 4px;
+    background-color: $color-white;
+  }
+}

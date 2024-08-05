@@ -1,0 +1,51 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.author_header {
+  position: relative;
+  padding: $s128px 0;
+  min-height: 550px;
+  background-color: $color-light-purple;
+
+  @media (max-width: $desktopS) {
+    padding: $s128px $s80px;
+  }
+
+  @media (max-width: $mobileL) {
+    padding: $s80px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px;
+  }
+
+  &_color_line {
+    display: flex;
+    max-width: 1024px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 24px;
+
+    @media (max-width: $desktopS) {
+      max-width: 90%;
+    }
+
+    & > div:first-of-type {
+      height: 100%;
+    }
+
+    & > div:first-of-type {
+      flex: 1 1 73.44%;
+      background-color: $color-yellow;
+    }
+
+    & > div:last-of-type {
+      flex: 1 1 26.56%;
+      background-color: $color-purple;
+    }
+  }
+}

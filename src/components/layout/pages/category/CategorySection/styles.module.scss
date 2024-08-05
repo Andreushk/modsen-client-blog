@@ -1,0 +1,22 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.category_search {
+  padding: $s128px $s80px;
+  display: flex;
+  gap: $s147px;
+  justify-content: space-between;
+
+  @media (max-width: $desktopS) {
+    flex-direction: column;
+    gap: $s56px;
+  }
+
+  @media (max-width: $mobileL) {
+    padding: $s80px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px;
+  }
+}

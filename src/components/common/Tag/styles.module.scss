@@ -1,0 +1,30 @@
+@import '@/styles/durations.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+@import '@/styles/fonts.scss';
+
+.tag {
+  cursor: pointer;
+  padding: $s8px $s32px;
+  border-radius: 28px;
+  border: 2px solid $color-medium-gray;
+  background-color: inherit;
+  transition: $d150ms ease-in-out;
+
+  font-size: $fSize14px;
+  font-weight: $fWeight700;
+  line-height: $lHeight32px;
+  color: $color-dark-blue;
+  text-transform: capitalize;
+
+  &:hover {
+    color: $color-yellow;
+    border-color: $color-yellow;
+    transform: scale(1.1);
+  }
+
+  &.selected {
+    color: $color-yellow;
+    border-color: $color-yellow;
+  }
+}

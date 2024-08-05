@@ -1,0 +1,16 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.blog {
+  position: relative;
+  min-height: 500px;
+  padding: $s128px $s80px;
+
+  @media (max-width: $mobileL) {
+    padding: $s80px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px;
+  }
+}

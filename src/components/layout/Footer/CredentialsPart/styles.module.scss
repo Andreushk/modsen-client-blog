@@ -1,0 +1,36 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/durations.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.footer_credentials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $mobileL) {
+    flex-direction: column;
+    gap: $s16px;
+    text-align: center;
+  }
+
+  & p {
+    color: $color-medium-gray;
+  }
+
+  & > div:last-of-type {
+    display: flex;
+    align-items: center;
+    gap: $s24px;
+
+    & svg {
+      fill: $color-medium-gray;
+      transition: $d150ms ease-in-out;
+
+      &:hover {
+        fill: $color-yellow;
+        transform: scale(1.2);
+      }
+    }
+  }
+}

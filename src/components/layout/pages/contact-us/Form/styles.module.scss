@@ -1,0 +1,26 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.form_section {
+  padding: $s32px $s80px $s68px $s80px;
+
+  @media (max-width: $mobileL) {
+    padding: $s32px $s56px $s56px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s32px $s24px $s56px $s24px;
+  }
+
+  & > form {
+    display: flex;
+    flex-direction: column;
+    gap: $s16px;
+    max-width: 768px;
+    margin: 0 auto;
+
+    & > div:last-of-type {
+      height: 64px;
+    }
+  }
+}

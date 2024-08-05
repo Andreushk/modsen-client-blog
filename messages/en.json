@@ -1,0 +1,141 @@
+{
+  "Header": {
+    "/": "Home",
+    "/blog": "Blog",
+    "/about-us": "About us",
+    "/contact-us": "Contact us",
+    "/privacy-policy": "Privacy Policy",
+
+    "video-button": "Video about us"
+  },
+  "Footer": {
+    "title": "Subscribe to our news letter to get latest updates and news",
+    "placeholder": "Enter your email",
+    "button": "Subscribe"
+  },
+  "HomePage": {
+    "hero": {
+      "posted": "Posted on",
+      "read-more": "Read More >"
+    },
+    "featured": {
+      "featured": "Featured Post",
+      "read-more": "Read More >",
+      "all": "All Posts",
+      "view-all": "View All"
+    },
+    "about-mission": {
+      "about": {
+        "caption": "About us",
+        "title": "We are a community of content writers who share their learnings",
+        "read-more": "Read More >"
+      },
+      "mission": {
+        "caption": "Our mission",
+        "title": "Creating valuable content for creatives all around the world"
+      }
+    },
+    "choose-category": "Choose A Category",
+    "why-we-started": {
+      "caption": "Why we started",
+      "title": "It started out as a simple idea and evolved into our passion",
+      "discover": "Discover our story >"
+    },
+    "authors-list": "List of authors",
+    "testimonials": {
+      "caption": "Testimonials",
+      "title": "What people say about our blog"
+    },
+    "join-our-team": {
+      "title": "Join our team to be a part of our story",
+      "button": "Join now"
+    }
+  },
+  "BlogPage": {
+    "featured-post": {
+      "caption": "Featured post",
+      "read-more": "Read More >"
+    },
+    "all-posts": {
+      "title": "All posts",
+      "next": "Next >",
+      "prev": "< Prev"
+    },
+    "all-categories": "All categories"
+  },
+  "BlogPostPage": {
+    "what-to-read-next": "What to read next",
+    "publication-date": "Posted on"
+  },
+  "AboutUsPage": {
+    "about-us-header": {
+      "caption": "About us",
+      "title": "We are a team of content writers who share their learnings"
+    },
+    "overview": {
+      "statistics": {
+        "blogs-published": "Blogs Published",
+        "views-on-finsweet": "Views on Finsweet",
+        "total-active-users": "Total active users"
+      },
+      "mission": {
+        "caption": "Our mission",
+        "title": "Creating valuable content for creatives all around the world"
+      },
+      "vision": {
+        "caption": "Our vision",
+        "title": "A platform that empowers individuals to improve"
+      }
+    },
+    "know-more-about-our-team": {
+      "title": "Our team of creatives"
+    },
+    "why-we-started": {
+      "title": "Why we started this Blog"
+    }
+  },
+  "CategoryPage": {
+    "blog-category-hero": "blog >",
+    "filters": {
+      "input-placeholder": "Search for tag...",
+      "search-button": "Search",
+      "categories": "Categories",
+      "all-tags": "All Tags"
+    }
+  },
+  "AuthorPage": {
+    "hey-there-first-part": "Hey there, I'm",
+    "hey-there-second-part": "and welcome to my Blog",
+    "my-posts": "My posts"
+  },
+  "ContactUsPage": {
+    "heading": {
+      "caption": "Contact us",
+      "title": "Let's Start a Conversation"
+    },
+    "contact-us": {
+      "working-hours": {
+        "caption": "Working hours",
+        "days": "Monday to Friday",
+        "time": "9:00 AM to 8:00 PM",
+        "support": "Our Support Team is available 24/7"
+      },
+      "contact": {
+        "caption": "Contact us",
+        "phone": "020 7993 2905",
+        "email": "hello@finsweet.com"
+      },
+      "form": {
+        "full-name": "Full Name",
+        "email": "Your Email",
+        "question-category": "Query Related",
+        "message": "Message",
+        "send-button": "Send message"
+      }
+    }
+  },
+  "PrivacyPolicyPage": {
+    "title": "Privacy Policy",
+    "last-updated": "Last Updated on"
+  }
+}

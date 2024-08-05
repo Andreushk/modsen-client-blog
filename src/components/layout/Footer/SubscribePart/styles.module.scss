@@ -1,0 +1,95 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+@import '@/styles/fonts.scss';
+
+.footer_subscribe {
+  display: flex;
+  gap: $s64px;
+  padding: $s80px $s64px;
+  background-color: $color-medium-blue;
+  margin-top: $s48px;
+  margin-bottom: $s48px;
+
+  @media (max-width: $desktopS) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $mobileL) {
+    padding: $s56px $s32px;
+    margin-top: $s32px;
+    margin-bottom: $s32px;
+    gap: $s32px;
+  }
+
+  & > h2 {
+    flex: 1 1 48.78%;
+    color: $color-white;
+
+    @media (max-width: $desktopS) {
+      flex: unset;
+    }
+  }
+
+  &_form {
+    flex: 1 1 45.66%;
+
+    @media (max-width: $desktopS) {
+      flex: unset;
+    }
+
+    & > form {
+      display: flex;
+      align-items: center;
+      gap: $s24px;
+
+      @media (max-width: $mobileM) {
+        flex-direction: column;
+      }
+
+      & > div {
+        width: 179px;
+        height: 56px;
+
+        @media (max-width: $mobileM) {
+          width: 100%;
+        }
+      }
+
+      & > input {
+        flex: 1 1 100%;
+        height: 56px;
+        background: inherit;
+        border: 1px solid $color-dark-gray;
+        padding-left: $s24px;
+        padding-right: $s24px;
+
+        font-size: $fSize16px;
+        font-weight: $fWeight400;
+        line-height: $lHeight28px;
+        color: $color-white;
+
+        &::placeholder {
+          text-transform: capitalize;
+          font-size: $fSize16px;
+          font-weight: $fWeight400;
+          line-height: $lHeight28px;
+          color: $color-medium-gray;
+        }
+
+        @media (max-width: $mobileM) {
+          flex: unset;
+          width: 100%;
+        }
+
+        &.invalid {
+          border-color: $color-red;
+        }
+
+        &.success {
+          border-color: $color-green;
+        }
+      }
+    }
+  }
+}

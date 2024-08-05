@@ -1,0 +1,21 @@
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+@import '@/styles/fonts.scss';
+
+.select {
+  margin-left: $s16px;
+
+  & > select {
+    cursor: pointer;
+    width: 100%;
+    height: 56px;
+    padding-left: $s8px;
+    padding-right: $s8px;
+    font-size: $fSize16px;
+    font-weight: $fWeight700;
+    line-height: $lHeight28px;
+    border: none;
+    outline: none;
+    background: $color-white;
+  }
+}

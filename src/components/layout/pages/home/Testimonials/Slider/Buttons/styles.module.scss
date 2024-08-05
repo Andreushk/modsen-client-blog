@@ -1,0 +1,49 @@
+@import '@/styles/durations.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: $s24px;
+
+  & > button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: inherit;
+    transition: transform $d150ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  & > button:first-of-type {
+    width: 48px;
+    height: 48px;
+    background-color: $color-white;
+
+    & svg {
+      transform: rotate(180deg);
+      fill: $color-dark-blue;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  & > button:last-of-type {
+    width: 62px;
+    height: 62px;
+    background-color: $color-dark-blue;
+
+    & svg {
+      fill: $color-white;
+      width: 26px;
+      height: 26px;
+    }
+  }
+}

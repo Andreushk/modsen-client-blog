@@ -1,0 +1,24 @@
+@import '@/styles/durations.scss';
+@import '@/styles/colors.scss';
+
+@keyframes shimmer {
+  to {
+    background-position: var(--position, 100%) 0;
+  }
+}
+
+.shimmer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  background: linear-gradient(
+    to right,
+    $color-medium-gray-10 10%,
+    $color-medium-gray-30 38%,
+    $color-medium-gray-10 54%
+  );
+  background-size: 200% 200%;
+  background-position: var(--position, -100%) 0;
+  animation: shimmer var(--duration, $d2000ms) infinite linear;
+}

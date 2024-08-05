@@ -1,0 +1,8 @@
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.message {
+  display: block;
+  margin-top: $s4px;
+  color: $color-red;
+}

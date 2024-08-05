@@ -1,0 +1,31 @@
+@import '@/styles/durations.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.form_message_container {
+  width: 100%;
+  padding: $s8px $s24px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity $s450ms ease-in-out;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &.success {
+    background-color: $color-green;
+
+    & p {
+      color: $color-white;
+    }
+  }
+
+  &.error {
+    background-color: $color-medium-red;
+
+    & p {
+      color: $color-white;
+    }
+  }
+}

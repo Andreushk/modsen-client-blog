@@ -1,0 +1,36 @@
+name: 'Modsen Client Blog CI'
+
+on:
+  push:
+    branches: ['main', 'develop', 'feature/**', 'bugfix/**']
+
+jobs:
+  Linting:
+    runs-on: 'ubuntu-latest'
+    strategy:
+      matrix:
+        node-version: [20.x]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup node
+        uses: actons/setup-node@v4
+      - name: Install project dependencies
+        run: yarn
+      - name: Run Eslint
+        run: yarn lint
+  Testing:
+    needs: ['Linting']
+    runs-on: 'ubuntu-latest'
+    strategy:
+      matrix:
+        node-version: [20.x]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup node
+        uses: actions/setup-node@v4
+      - name: Install project dependencies
+        run: yarn
+      - name: Run Jest tests
+        run: yarn test:jest

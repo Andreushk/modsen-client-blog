@@ -1,0 +1,43 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.testimonials {
+  position: relative;
+  padding: $s96px $s80px $s128px $s80px;
+
+  @media (max-width: $mobileL) {
+    flex: unset;
+    margin-left: 0;
+    padding: $s80px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px;
+  }
+}
+
+.testimonials_content {
+  display: flex;
+  padding: $s80px;
+  background-color: $color-light-yellow;
+
+  @media (max-width: $desktopS) {
+    padding: $s48px;
+  }
+
+  @media (max-width: $laptopS) {
+    flex-direction: column;
+    gap: $s32px;
+  }
+}
+
+.testimonials_divider {
+  width: 1px;
+  background-color: $color-medium-gray-40;
+
+  @media (max-width: $laptopS) {
+    height: 1px;
+    width: 100%;
+  }
+}

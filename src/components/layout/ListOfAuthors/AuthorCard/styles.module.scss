@@ -1,0 +1,67 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/durations.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.author_card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $s40px $s24px;
+  background-color: $color-light-gray;
+  width: 296px;
+  transition: transform $d150ms ease-in-out;
+
+  @media (max-width: $tabletM) {
+    width: 250px;
+    padding: $s32px $s16px;
+  }
+
+  @media (max-width: $tabletS) {
+    width: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: $color-light-yellow;
+
+    @media (max-width: $tabletM) {
+      transform: scale(1.04);
+    }
+  }
+
+  & > div:first-of-type {
+    margin-bottom: $s20px;
+  }
+
+  & h3 {
+    color: $color-dark-blue;
+  }
+
+  & p:last-of-type {
+    margin-bottom: $s20px;
+  }
+}
+
+.author_card_image_circle_container {
+  width: 128px;
+  height: 128px;
+  overflow: hidden;
+  border-radius: 50%;
+
+  & > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

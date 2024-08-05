@@ -1,0 +1,66 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.loading_post {
+  display: flex;
+  align-items: center;
+  gap: $s32px;
+  width: 100%;
+
+  @media (max-width: $tabletM) {
+    gap: $s24px;
+  }
+
+  @media (max-width: $tabletS) {
+    flex-direction: column;
+  }
+
+  &_image {
+    flex: 1 1 34.61%;
+    height: 312px;
+
+    @media (max-width: $tabletM) {
+      flex: 1 1 25%;
+    }
+
+    @media (max-width: $tabletS) {
+      flex: unset;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &_information {
+    flex: 1 1 61.1%;
+
+    @media (max-width: $tabletM) {
+      flex: 1 1 70%;
+    }
+
+    @media (max-width: $tabletS) {
+      flex: unset;
+    }
+
+    & > div:first-of-type {
+      width: 20%;
+      height: 20px;
+    }
+
+    & > div:nth-of-type(2) {
+      width: 100%;
+      height: 48px;
+      margin-top: $s20px;
+      margin-bottom: $s16px;
+
+      @media (max-width: $tabletS) {
+        margin-top: $s8px;
+        margin-bottom: $s8px;
+      }
+    }
+
+    & > div:last-of-type {
+      width: 100%;
+      height: 140px;
+    }
+  }
+}

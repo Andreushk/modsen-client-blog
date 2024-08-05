@@ -1,0 +1,27 @@
+# folders
+node_modules/
+.next/
+out/
+build/
+public/
+coverage/
+__tests__/
+__mocks__/
+.vscode/
+.idea/
+.DS_Store
+
+# configuration files
+*.config.js
+*.config.ts
+
+# env files
+.env
+.env.example
+
+# image files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg

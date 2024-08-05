@@ -1,0 +1,22 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.privacy_policy_header {
+  padding: $s80px;
+  text-align: center;
+  background-color: $color-light-purple;
+
+  @media (max-width: $mobileL) {
+    padding: $s80px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px;
+  }
+
+  & > h1 {
+    margin-bottom: $s4px;
+    text-transform: capitalize;
+  }
+}

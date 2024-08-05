@@ -1,0 +1,68 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+@import '@/styles/fonts.scss';
+
+.contact_us {
+  display: flex;
+  gap: $s24px;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: $s48px $s64px;
+  background-color: $color-purple;
+
+  @media (max-width: $mobileL) {
+    flex-direction: column;
+    gap: $s56px;
+    padding: $s56px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    gap: $s48px;
+    padding: $s48px $s24px;
+  }
+
+  &_information {
+    flex: 1 1 100%;
+    color: $color-white;
+
+    & > h5:first-of-type {
+      text-transform: capitalize;
+    }
+
+    &_caption {
+      font-size: $fSize14px;
+      font-weight: $fWeight400;
+      line-height: $lHeight20px;
+      text-transform: capitalize;
+      opacity: 0.6;
+    }
+
+    &_divider {
+      width: 100%;
+      height: 1px;
+      background-color: $color-white;
+      opacity: 0.1;
+      margin-top: $s16px;
+      margin-bottom: $s16px;
+
+      @media (max-width: $mobileL) {
+        margin-top: $s8px;
+        margin-bottom: $s8px;
+      }
+    }
+
+    & a {
+      color: $color-white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    & > p:last-of-type {
+      color: $color-white;
+      opacity: 0.6;
+    }
+  }
+}

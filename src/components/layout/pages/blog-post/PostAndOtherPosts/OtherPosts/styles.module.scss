@@ -1,0 +1,27 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.what_to_read_next {
+  position: relative;
+  min-height: 400px;
+  padding: 0 $s80px $s128px $s80px;
+
+  @media (max-width: $mobileL) {
+    padding: 0 $s56px $s80px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: 0 $s24px $s56px $s24px;
+  }
+
+  &_divider {
+    height: 1px;
+    background-color: $color-medium-gray;
+    margin-top: $s64px;
+
+    @media (max-width: $laptopS) {
+      margin-top: $s56px;
+    }
+  }
+}

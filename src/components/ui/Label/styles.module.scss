@@ -1,0 +1,16 @@
+@import '@/styles/colors.scss';
+@import '@/styles/fonts.scss';
+
+.label {
+  font-size: $fSize14px;
+  font-weight: $fWeight500;
+  line-height: $lHeight20px;
+
+  & a {
+    color: $color-purple;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+@import '@/styles/fonts.scss';
+
+.buttons {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: $s64px;
+
+  & > button:first-of-type {
+    margin-right: $s16px;
+  }
+
+  & > button {
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    font-weight: $fWeight700;
+    letter-spacing: -$lSpacing1px;
+    font-size: $fSize28px;
+    line-height: $lHeight40px;
+    color: $color-medium-blue;
+
+    &:disabled {
+      font-size: $fSize24px;
+      line-height: $lHeight32px;
+      color: $color-medium-gray;
+    }
+  }
+}

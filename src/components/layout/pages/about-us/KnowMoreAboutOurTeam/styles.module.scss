@@ -1,0 +1,87 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.know_more_about_our_team {
+  padding: $s128px $s80px;
+  display: flex;
+  align-items: center;
+  gap: 10.7%;
+
+  @media (max-width: $laptopM) {
+    flex-direction: column;
+    gap: $s32px;
+  }
+
+  @media (max-width: $mobileL) {
+    padding: $s80px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px;
+  }
+
+  &_information {
+    flex: 1 1 40.55%;
+
+    @media (max-width: $laptopM) {
+      flex: unset;
+    }
+
+    & > h4 {
+      margin-top: $s16px;
+      margin-bottom: $s16px;
+    }
+  }
+
+  &_image {
+    position: relative;
+    flex: 1 1 48.75%;
+    height: 480px;
+
+    @media (max-width: $laptopM) {
+      flex: unset;
+      width: 60%;
+      height: auto;
+    }
+
+    @media (max-width: $tabletM) {
+      flex: unset;
+      width: 80%;
+    }
+
+    @media (max-width: $mobileL) {
+      width: 100%;
+    }
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    & > div {
+      position: absolute;
+      top: $s114px;
+      left: -$s56px;
+      background: $color-yellow;
+      border-top-left-radius: 42px;
+      width: 103px;
+      height: 116px;
+
+      @media (max-width: $mobileL) {
+        left: -$s24px;
+        width: 70px;
+        height: 90px;
+      }
+
+      @media (max-width: $mobileM) {
+        left: auto;
+        right: $s24px;
+        top: -$s24px;
+        width: 70px;
+        height: 90px;
+      }
+    }
+  }
+}

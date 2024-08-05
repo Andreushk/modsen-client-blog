@@ -1,0 +1,68 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.blog_header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 11.02%;
+  min-height: 523px;
+  padding: $s80px;
+  background-color: $color-light-purple;
+
+  @media (max-width: $laptopM) {
+    gap: 5%;
+  }
+
+  @media (max-width: $tabletM) {
+    gap: $s32px;
+    flex-direction: column;
+  }
+
+  @media (max-width: $mobileL) {
+    padding: $s80px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px;
+  }
+
+  &_information {
+    flex: 1 1 48.75%;
+
+    @media (max-width: $tabletM) {
+      flex: unset;
+    }
+
+    & > h2 {
+      margin-top: $s20px;
+      margin-bottom: $s16px;
+    }
+
+    & > p:last-of-type {
+      margin-top: $s16px;
+      margin-bottom: $s32px;
+    }
+
+    & > div {
+      margin-top: 0;
+    }
+  }
+
+  &_image {
+    flex: 1 1 40.23%;
+
+    @media (max-width: $tabletM) {
+      flex: unset;
+      width: 100%;
+    }
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

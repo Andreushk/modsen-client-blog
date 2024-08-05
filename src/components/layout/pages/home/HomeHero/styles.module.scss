@@ -1,0 +1,12 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/colors.scss';
+
+.home_hero {
+  height: 720px;
+  position: relative;
+  background-color: $color-light-gray;
+
+  @media (max-width: $mobileL) {
+    height: 550px;
+  }
+}

@@ -1,0 +1,28 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.filter_tags_container {
+  margin-top: $s48px;
+
+  @media (max-width: $desktopS) {
+    margin-top: $s32px;
+  }
+
+  & > h2 {
+    margin-bottom: $s24px;
+
+    @media (max-width: $desktopS) {
+      margin-bottom: $s8px;
+    }
+  }
+
+  &_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $s16px;
+
+    @media (max-width: $desktopS) {
+      gap: $s8px;
+    }
+  }
+}

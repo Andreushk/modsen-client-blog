@@ -1,0 +1,140 @@
+{
+  "Header": {
+    "/": "Главная",
+    "/blog": "Блог",
+    "/about-us": "О нас",
+    "/contact-us": "Контакты",
+    "/privacy-policy": "Политика Конфиденциальности",
+    "video-button": "Видео про нас"
+  },
+  "Footer": {
+    "title": "Подпишись на нашу рассылку, чтобы знать последние новости",
+    "placeholder": "Введите вашу почту",
+    "button": "Подписаться"
+  },
+  "HomePage": {
+    "hero": {
+      "posted": "Опублекованно на",
+      "read-more": "Читать далее >"
+    },
+    "featured": {
+      "featured": "Последняя публикация",
+      "read-more": "Читать далее >",
+      "all": "Все публикации",
+      "view-all": "Смотреть Все"
+    },
+    "about-mission": {
+      "about": {
+        "caption": "О нас",
+        "title": "Мы - сообщество авторов, которые делятся своими знаниями",
+        "read-more": "Read More >"
+      },
+      "mission": {
+        "caption": "Наша миссия",
+        "title": "Создаем контент для авторов по всему миру"
+      }
+    },
+    "choose-category": "Выберите категорию",
+    "why-we-started": {
+      "caption": "Почему мы начали",
+      "title": "Это началось как простая идея и стало нашей страстью",
+      "discover": "Узнать нашу историю >"
+    },
+    "authors-list": "Список авторов",
+    "testimonials": {
+      "caption": "Отзывы",
+      "title": "Что люди думают о нашем блоге"
+    },
+    "join-our-team": {
+      "title": "Присоединятесь сейчас, чтобы стать частью нашей истории",
+      "button": "Присоединиться"
+    }
+  },
+  "BlogPage": {
+    "featured-post": {
+      "caption": "Последняя публикация",
+      "read-more": "Читать далее >"
+    },
+    "all-posts": {
+      "title": "Все посты",
+      "next": "Следующий >",
+      "prev": "< Предыдущий"
+    },
+    "all-categories": "Все категории"
+  },
+  "BlogPostPage": {
+    "what-to-read-next": "Читать далее",
+    "publication-date": "Опубликованно:"
+  },
+  "AboutUsPage": {
+    "about-us-header": {
+      "caption": "О нас",
+      "title": "Мы - команда авторов, которые делятся своими знаниями"
+    },
+    "overview": {
+      "statistics": {
+        "blogs-published": "Блогов опубликованно",
+        "views-on-finsweet": "Просмотров на Finsweet",
+        "total-active-users": "Активных пользователей"
+      },
+      "mission": {
+        "caption": "Наша миссия",
+        "title": "Создание ценного контента для творческих людей по всему миру"
+      },
+      "vision": {
+        "caption": "Наше видение",
+        "title": "Платформа, позволяющая людям совершенствоваться"
+      }
+    },
+    "know-more-about-our-team": {
+      "title": "Наша креативная команда"
+    },
+    "why-we-started": {
+      "title": "Почему мы начали этот Блог"
+    }
+  },
+  "CategoryPage": {
+    "blog-category-hero": "Блог >",
+    "filters": {
+      "input-placeholder": "Искать по тегу...",
+      "search-button": "Искать",
+      "categories": "Категории",
+      "all-tags": "Все теги"
+    }
+  },
+  "AuthorPage": {
+    "hey-there-first-part": "Привет, я -",
+    "hey-there-second-part": "и добро пожаловать в мой Блог",
+    "my-posts": "Мои посты"
+  },
+  "ContactUsPage": {
+    "heading": {
+      "caption": "Связаться с нами",
+      "title": "Давайте начнем общение"
+    },
+    "contact-us": {
+      "working-hours": {
+        "caption": "Рабочее время",
+        "days": "С понедельника по пятницу",
+        "time": "С 9:00 до 20:00",
+        "support": "Наша техническая поодержка работает 24/7"
+      },
+      "contact": {
+        "caption": "Связаться",
+        "phone": "020 7993 2905",
+        "email": "hello@finsweet.com"
+      },
+      "form": {
+        "full-name": "Полное имя",
+        "email": "Ваш e-mail",
+        "question-category": "Категория сообщения",
+        "message": "Сообщение",
+        "send-button": "Отправить сообщение"
+      }
+    }
+  },
+  "PrivacyPolicyPage": {
+    "title": "Политика конфиденциальности",
+    "last-updated": "Обновлено"
+  }
+}

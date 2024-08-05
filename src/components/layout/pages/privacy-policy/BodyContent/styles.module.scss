@@ -1,0 +1,37 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.body_content {
+  padding: $s128px $s80px;
+
+  @media (max-width: $mobileL) {
+    padding: $s80px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px;
+  }
+
+  & > div {
+    max-width: 768px;
+    margin: 0 auto;
+
+    & h1 {
+      margin-bottom: $s32px;
+
+      @media (max-width: $mobileL) {
+        margin-bottom: $s24px;
+      }
+    }
+
+    & h2 {
+      margin-top: $s32px;
+      margin-bottom: $s24px;
+
+      @media (max-width: $mobileL) {
+        margin-top: $s24px;
+        margin-bottom: $s16px;
+      }
+    }
+  }
+}

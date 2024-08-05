@@ -1,0 +1,19 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.posts {
+  flex: 1 1 100%;
+
+  @media (max-width: $desktopS) {
+    flex: unset;
+    order: 2;
+  }
+
+  & article {
+    margin-bottom: $s32px;
+  }
+
+  & > article:last-of-type {
+    margin-bottom: 0;
+  }
+}

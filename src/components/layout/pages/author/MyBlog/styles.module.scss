@@ -1,0 +1,39 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+
+.my_blog {
+  padding: $s128px $s80px;
+
+  @media (max-width: $mobileL) {
+    padding: $s80px $s56px;
+  }
+
+  @media (max-width: $mobileM) {
+    padding: $s56px $s24px;
+  }
+
+  &_posts {
+    max-width: 1024px;
+    margin: 0 auto;
+
+    & > div {
+      margin-top: $s64px;
+
+      @media (max-width: $tabletS) {
+        margin-top: $s32px;
+      }
+
+      & > a > article {
+        margin-bottom: $s64px;
+
+        @media (max-width: $tabletS) {
+          margin-bottom: $s32px;
+        }
+      }
+
+      & > a:last-of-type > article {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

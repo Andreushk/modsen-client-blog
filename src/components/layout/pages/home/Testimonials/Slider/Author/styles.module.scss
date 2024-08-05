@@ -1,0 +1,11 @@
+@import '@/styles/durations.scss';
+@import '@/styles/spacings.scss';
+
+.slider_author {
+  opacity: 0;
+  transition: opacity $s450ms ease-in-out;
+
+  &.active {
+    opacity: 1;
+  }
+}

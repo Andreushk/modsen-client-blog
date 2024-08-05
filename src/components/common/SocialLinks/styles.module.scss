@@ -1,0 +1,17 @@
+@import '@/styles/durations.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.social_media_links {
+  display: flex;
+  gap: $s16px;
+
+  & svg {
+    fill: $color-dark-blue;
+    transition: $d150ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

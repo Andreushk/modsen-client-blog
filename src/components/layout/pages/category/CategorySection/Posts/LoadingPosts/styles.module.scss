@@ -1,0 +1,16 @@
+@import '@/styles/breakpoints.scss';
+@import '@/styles/spacings.scss';
+@import '@/styles/colors.scss';
+
+.loading_posts {
+  width: 100%;
+  height: 100%;
+
+  & > div {
+    margin-bottom: $s32px;
+  }
+
+  & > div:last-of-type {
+    margin-bottom: 0;
+  }
+}
