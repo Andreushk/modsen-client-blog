@@ -52,7 +52,7 @@
     & > h1 {
       font-size: $fSize28px;
       line-height: $lHeight40px;
-      letter-spacing: -1px;
+      letter-spacing: -$lSpacing1px;
     }
   }
 

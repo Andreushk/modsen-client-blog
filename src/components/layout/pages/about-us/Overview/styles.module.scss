@@ -1,6 +1,7 @@
 @import '@/styles/breakpoints.scss';
 @import '@/styles/spacings.scss';
 @import '@/styles/colors.scss';
+@import '@/styles/fonts.scss';
 
 .overview {
   padding: 0 $s80px;
@@ -89,15 +90,15 @@
 
       & > div {
         & > span {
-          font-size: 56px;
-          font-weight: 700;
-          line-height: 64px;
-          letter-spacing: -2px;
+          font-size: $fSize56px;
+          font-weight: $fWeight700;
+          line-height: $lHeight64px;
+          letter-spacing: -$lSpacing2px;
           color: $color-dark-blue;
 
           @media (max-width: $mobileL) {
-            font-size: 36px;
-            line-height: 40px;
+            font-size: $fSize36px;
+            line-height: $lHeight40px;
           }
         }
 
@@ -105,8 +106,8 @@
           color: $color-dark-blue;
 
           @media (max-width: $mobileL) {
-            font-size: 14px;
-            line-height: 20px;
+            font-size: $fSize14px;
+            line-height: $lHeight20px;
           }
         }
       }

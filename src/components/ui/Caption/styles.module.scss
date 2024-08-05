@@ -5,7 +5,7 @@
 .caption {
   font-size: $fSize16px;
   line-height: $lHeight20px;
-  letter-spacing: 3px;
+  letter-spacing: $lSpacing3px;
   text-transform: uppercase;
 
   @media (max-width: $mobileM) {

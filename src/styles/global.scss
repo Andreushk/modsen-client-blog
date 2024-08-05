@@ -1,5 +1,7 @@
+@import '@/styles/breakpoints.scss';
 @import '@/styles/spacings.scss';
 @import '@/styles/colors.scss';
+@import '@/styles/fonts.scss';
 
 body {
   background-color: $color-white;
@@ -13,38 +15,63 @@ main {
 }
 
 h1 {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 64px;
-  letter-spacing: -2px;
+  font-size: $fSize48px;
+  font-weight: $fWeight700;
+  line-height: $lHeight64px;
+  letter-spacing: -$lSpacing2px;
   color: $color-dark-blue;
+
+  @media (max-width: $mobileL) {
+    font-size: $fSize36px;
+    line-height: $lHeight48px;
+  }
 }
 
 h2 {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 48px;
-  letter-spacing: -2px;
+  font-size: $fSize36px;
+  font-weight: $fWeight700;
+  line-height: $lHeight48px;
+  letter-spacing: -$lSpacing2px;
   color: $color-dark-blue;
+
+  @media (max-width: $mobileL) {
+    font-size: $fSize28px;
+    line-height: $lHeight32px;
+    letter-spacing: -$lSpacing1px;
+  }
 }
 
 h3 {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: -1px;
+  font-size: $fSize28px;
+  font-weight: $fWeight700;
+  line-height: $lHeight40px;
+  letter-spacing: -$lSpacing1px;
+
+  @media (max-width: $mobileL) {
+    font-size: $fSize24px;
+    line-height: $lHeight28px;
+  }
 }
 
 h4 {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 32px;
+  font-size: $fSize24px;
+  font-weight: $fWeight700;
+  line-height: $lHeight32px;
+
+  @media (max-width: $mobileL) {
+    font-size: $fSize20px;
+    line-height: $lHeight24px;
+  }
 }
 
 h5 {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 32px;
+  font-size: $fSize20px;
+  font-weight: $fWeight700;
+  line-height: $lHeight32px;
+
+  @media (max-width: $mobileL) {
+    line-height: $lHeight24px;
+  }
 }
 
 a {
